@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 from decouple import config
 
@@ -23,9 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', cast=str)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default=[], cast=str).split(" ")
+LOGIN_REDIRECT_URL = 'posts:home'
+LOGOUT_REDIRECT_URL = 'posts:home'
+
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    ".herokuapp.com"
+    ]
 
 # Application definition
 
@@ -120,7 +126,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_URL = '/media/'
+
+STATIC_URL = 'static/'
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
+else:
+    STATICFILES_DIRS = [
+        Path.joinpath(BASE_DIR, 'static')
+    ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
