@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<img src="{% static object.image %}">
+<h1>{{object.name}}</h1>
+<p>{{object.body}}</p>
+{% for post in object.post_set.all %}
+{{post}}
+<img src="{% static post.image %}">
+<h1>{{post.title}}</h1>
+<p>{{post.body}}</p>
+{% endfor %}
+{% endblock %}

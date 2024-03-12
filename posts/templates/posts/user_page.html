@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p><a href="{% url 'posts:post_create' %}">Publish New Post</a></p>
+<p><a href="{% url 'posts:manage_posts' request.user.id %}">Manage Posts</a></p>
+<p>
+<form method="POST" action="{% url 'accounts:logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form></p>
+{% endblock content %}

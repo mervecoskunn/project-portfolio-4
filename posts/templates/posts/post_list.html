@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for post in object_list %}
+<h1>{{post.title}}</h1>
+<img src="{% static post.image %}">
+<p>{{ post.body | truncatechars:100 }}</p>
+<a href="{% url 'posts:post_detail' post.id %}"
+   class="btn btn-outline-secondary btn-sm">Read
+    More</a>
+<p>by {{post.author}} {{post.created_on}}</p>
+<p>Likes {{post.post_likes.count}}</p>
+<p>Comments {{post.post_comments.count}}</p>
+{% endfor %}
+
+{% endblock content %}

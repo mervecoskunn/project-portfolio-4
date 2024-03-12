@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>{{object.title}}</h1>
+<img src="{% static object.image %}">
+<p>{{object.body}}</p>
+<p>Comments:</p>
+{% if request.user.is_authenticated %}
+<form method="POST" action="{% url 'posts:comment_create' object.id %}">
+    {% csrf_token %}
+    {{comment_form.as_p}}
+    <button type="submit">Send</button>
+</form>
+{% else %}
+<a href="{% url 'accounts:login' %}">Please login to comment</a>
+{% endif %}
+{% for comment in object.post_comments.all %}
+<p>{{comment.created_on}} by {{comment.author}}</p>
+<p>{{comment.body}}</p>
+{% endfor %}
+{% endblock %}

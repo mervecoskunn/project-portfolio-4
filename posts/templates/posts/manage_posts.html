@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for post in object_list %}
+<p><a href="{% url 'posts:post_create' %}">Create New Post</a></p>
+<h1>{{post.title}}</h1>
+<p><img src="{% static post.image %}"></p>
+<p>{{post.created_on}} by {{post.author}}</p>
+<a href="{% url 'posts:post_edit' post.id %}">Edit</a>
+<a href="{% url 'posts:post_delete' post.id %}">Delete</a>
+{% endfor %}
+{% endblock %}
