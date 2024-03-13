@@ -68,6 +68,7 @@ class Post(models.Model):
         related_name='user_posts'
     )
     image = models.ImageField(upload_to='media/posts/%Y/%m/%d', verbose_name=_('Image'), help_text=_('Image'))
+    like = models.ManyToManyField(get_user_model(), related_name='post_likes', blank=True)
     category = models.ManyToManyField(
         Category,
         verbose_name=_('Categories'),
@@ -112,23 +113,6 @@ class Comment(models.Model):
         verbose_name = _('Comment')
         verbose_name_plural = _('Comments')
         ordering = ('-created_on',)
-
-    def __str__(self):
-        return self.post.__str__()
-
-
-class Like(models.Model):
-    """
-    A like on a post, with an author and post.
-    """
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    author = models.ForeignKey(get_user_model(), on_delete=models.PROTECT, related_name='user_likes')
-    post = models.ForeignKey(Post, on_delete=models.PROTECT, related_name='post_likes')
-
-    class Meta:
-        unique_together = ('author', 'post')
-        verbose_name = _('Like')
-        verbose_name_plural = _('Likes')
 
     def __str__(self):
         return self.post.__str__()

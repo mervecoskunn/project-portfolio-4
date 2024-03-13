@@ -1,3 +1,6 @@
+from django import views
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
 from django.views import generic
 from posts import models, forms
 from django.urls import reverse
@@ -23,18 +26,24 @@ class PostDetailView(generic.DetailView):
     model = models.Post
     template_name = 'posts/post_detail.html'
 
+    def get(self, request, *args, **kwargs):
+        post = get_object_or_404(self.queryset, pk=kwargs.get('pk'))
+        liked = post.like.filter(id=self.request.user.id).exists()
+        context = {
+            'post': post,
+            'liked': liked,
+        }
+        return render(request, 'posts/post_detail.html', context=context)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["comment_form"] = forms.CommentCreateForm
         return context
 
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
-
 
 class PostListView(generic.ListView):
     model = models.Post
-    queryset = models.Post.objects.all()
+    queryset = models.Post.objects.filter(is_approved=True)
     template_name = 'posts/category_list.html'
     paginate_by = 6
 
@@ -107,7 +116,13 @@ class CategoryDetailView(generic.DetailView):
         return context
 
     def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
+        posts = models.Post.objects.filter(is_approved=True,
+                                           category__id=kwargs.get('pk'))
+        context = {
+            'object': self.get_object(),
+            'posts': posts
+        }
+        return render(request, 'categories/category_detail.html', context)
 
 
 class UserPageView(generic.TemplateView):
@@ -125,3 +140,14 @@ class ManagePostView(generic.ListView):
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
+
+
+class PostLike(generic.DetailView):
+
+    def post(self, request, *args, **kwargs):
+        post = get_object_or_404(models.Post, pk=kwargs.get('post_id'))
+        if post.like.filter(id=request.user.id).exists():
+            post.like.remove(request.user)
+        else:
+            post.like.add(request.user)
+        return HttpResponseRedirect(reverse('posts:post_detail', args=[kwargs.get('post_id')]))

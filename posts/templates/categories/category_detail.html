@@ -5,7 +5,7 @@
 <img src="{% static object.image %}">
 <h1>{{object.name}}</h1>
 <p>{{object.body}}</p>
-{% for post in object.post_set.all %}
+{% for post in posts %}
 {{post}}
 <img src="{% static post.image %}">
 <h1>{{post.title}}</h1>

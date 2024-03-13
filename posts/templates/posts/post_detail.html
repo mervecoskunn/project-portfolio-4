@@ -12,6 +12,16 @@
     {{comment_form.as_p}}
     <button type="submit">Send</button>
 </form>
+<form action="{% url 'posts:like_post' object.id %}" method="POST">
+    {% csrf_token %}
+    {% if liked %}
+    <button type="submit" name="post_id" value="{{ object.id }}" class="btn-like"><i
+            class="fas fa-heart heart-like"></i></button>
+    {% else %}
+    <button type="submit" name="post_id" value="{{ object.id }}" class="btn-like"><i
+            class="far fa-heart heart-like"></i></button>
+    {% endif %}
+</form>
 {% else %}
 <a href="{% url 'accounts:login' %}">Please login to comment</a>
 {% endif %}
