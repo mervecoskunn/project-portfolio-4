@@ -65,14 +65,26 @@ class Post(models.Model):
         get_user_model(), verbose_name=_('Author'),
         help_text=_('Post creator'),
         on_delete=models.PROTECT,
-        related_name='user_posts'
+        related_name='user_posts',
+        blank=True
     )
-    image = models.ImageField(upload_to='media/posts/%Y/%m/%d', verbose_name=_('Image'), help_text=_('Image'))
-    like = models.ManyToManyField(get_user_model(), related_name='post_likes', blank=True)
-    category = models.ManyToManyField(
+    image = models.ImageField(
+        upload_to='media/posts/%Y/%m/%d',
+        verbose_name=_('Image'),
+        help_text=_('Image'),
+        null=True, blank=True
+    )
+    like = models.ManyToManyField(
+        get_user_model(),
+        related_name='post_likes',
+        blank=True
+    )
+    category = models.ForeignKey(
         Category,
         verbose_name=_('Categories'),
-        help_text=_('Categories')
+        help_text=_('Categories'),
+        on_delete=models.PROTECT,
+        related_name='category_posts'
     )
 
     class Meta:
@@ -116,3 +128,26 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.post.__str__()
+
+
+class Notification(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField(
+        max_length=255,
+        verbose_name=_('Title'),
+        help_text=_('Enter the title of your post.'),
+    )
+    body = models.TextField(
+        verbose_name=_('Body'),
+        help_text=_('Enter the body of your post.'),
+    )
+    created_on = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('Created On'),
+        help_text=_('The date and time the post was created.'),
+    )
+
+    class Meta:
+        verbose_name = _('Notification')
+        verbose_name_plural = _('Notifications')
+        ordering = ('-created_on',)
