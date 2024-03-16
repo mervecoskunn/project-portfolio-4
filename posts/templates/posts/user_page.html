@@ -1,11 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p><a href="{% url 'posts:post_create' %}">Publish New Post</a></p>
-<p><a href="{% url 'posts:manage_posts' request.user.id %}">Manage Posts</a></p>
-<p>
-<form method="POST" action="{% url 'accounts:logout' %}">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-</form></p>
+<div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="col-md-6">
+        <div class="card">
+            <p class="card-header text-center">Hi {{request.user}}. We are happy to see you join our Lunds'
+                Community!</p>
+            <div class="card-body">
+                <div class="flex d-flex justify-content-center m-3">
+                    <a href="{% url 'posts:post_create' %}" class="btn btn-primary btn-block w-100">
+                        Publish a Post
+                    </a>
+                </div>
+                <div class="flex d-flex justify-content-center m-3">
+                    <a href="{% url 'posts:manage_posts' request.user.id %}" class="btn btn-primary btn-block w-100">
+                        Manage my Post</a>
+                </div>
+                <div class="flex d-flex justify-content-center m-5">
+                    <form method="POST" action="{% url 'accounts:logout' %}">
+                        {% csrf_token %}
+                        <button class="btn btn-primary btn-block" type="submit">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

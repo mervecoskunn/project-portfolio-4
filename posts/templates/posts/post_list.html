@@ -2,17 +2,46 @@
 {% load static %}
 
 {% block content %}
+<div class="row justify-content-center align-items-center">
 
-{% for post in object_list %}
-<h1>{{post.title}}</h1>
-<img src="{% static post.image %}">
-<p>{{ post.body | truncatechars:100 }}</p>
-<a href="{% url 'posts:post_detail' post.id %}"
-   class="btn btn-outline-secondary btn-sm">Read
-    More</a>
-<p>by {{post.author}} {{post.created_on}}</p>
-<p>Likes {{post.post_likes.count}}</p>
-<p>Comments {{post.post_comments.count}}</p>
-{% endfor %}
+
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <a href="/"
+               class="d-flex align-items-center justify-content-center m-3 mb-lg-0 text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="fs-4">All Posts</span>
+            </a>
+        </div>
+    </div>
+
+  {% for post in object_list %}
+    <div class="col-md-4">
+        <div class="card mt-4 border-0">
+            <div class="d-sm-flex flex-md-column g-0">
+
+                <div class="col-md-12 col-sm-6">
+                    <img src="{% static post.image %}"
+                         class="card-img-top" alt="Restaurant">
+                </div>
+
+                <div class="col-md-12 col-sm-6">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{ post.body | truncatechars:250 }}</p>
+                        <a href="{% url 'posts:post_detail' post.id %}" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        By {{post.author}} - {{post.created_on}} - Likes {{post.like.count}} - Comments
+                        {{post.post_comments.count}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock content %}

@@ -8,9 +8,9 @@ from django.utils.translation import gettext_lazy as _
 class User(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=50, verbose_name=_('First Name'),
-                                  help_text=_('First Name'))
+                                  help_text=_('First Name'), null=True, blank=True)
     last_name = models.CharField(max_length=50, verbose_name=_('Last Name'),
-                                 help_text=_('Last Name'))
+                                 help_text=_('Last Name'),null=True, blank=True)
     email = models.EmailField(_("email address"), blank=True, unique=True)
 
     class Meta:

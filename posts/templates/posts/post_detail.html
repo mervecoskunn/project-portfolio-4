@@ -2,31 +2,97 @@
 {% load static %}
 
 {% block content %}
-<h1>{{object.title}}</h1>
-<img src="{% static object.image %}">
-<p>{{object.body}}</p>
-<p>Comments:</p>
-{% if request.user.is_authenticated %}
-<form method="POST" action="{% url 'posts:comment_create' object.id %}">
-    {% csrf_token %}
-    {{comment_form.as_p}}
-    <button type="submit">Send</button>
-</form>
-<form action="{% url 'posts:like_post' object.id %}" method="POST">
-    {% csrf_token %}
-    {% if liked %}
-    <button type="submit" name="post_id" value="{{ object.id }}" class="btn-like"><i
-            class="fas fa-heart heart-like"></i></button>
-    {% else %}
-    <button type="submit" name="post_id" value="{{ object.id }}" class="btn-like"><i
-            class="far fa-heart heart-like"></i></button>
-    {% endif %}
-</form>
-{% else %}
-<a href="{% url 'accounts:login' %}">Please login to comment</a>
-{% endif %}
-{% for comment in object.post_comments.all %}
-<p>{{comment.created_on}} by {{comment.author}}</p>
-<p>{{comment.body}}</p>
-{% endfor %}
+<div class="container">
+    <div class="row">
+        <!-- Üst kısım -->
+        <div class="col-lg-6">
+            <img src="{% static object.image %}"
+                 class="img-fluid" alt="Restaurant Image">
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{object.title}}</h5>
+                    <p class="card-text">
+                        {{object.body}}
+                    </p>
+                    <div class="d-flex justify-content-start align-items-center">
+                        {% if request.user.is_authenticated %}
+                        <form action="{% url 'posts:like_post' object.id %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <div class="d-flex justify-content-start align-items-center">
+                                <button type="submit" name="post_id" value="{{ object.id }}"
+                                        class="btn d-flex align-items-center">
+                                    <i class="fas fa-heart heart-like"></i>
+                                    <span>{{object.like.count}}</span>
+                                </button>
+                                {% else %}
+                                <button type="submit" name="post_id" value="{{ object.id }}"
+                                        class="btn d-flex align-items-center">
+                                    <i class="far fa-heart heart-like"></i>
+                                    <span>{{object.like.count}}</span>
+                                </button>
+                                <button type="button" class="btn d-flex align-items-center">
+                                    <i class="fa fa-comment"></i>
+                                    <span>{{object.post_comments.count}}</span>
+                                </button>
+                            </div>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <i class="fas fa-heart heart-like"></i>
+                        <span>{{object.like.count}}</span>
+                             <i class="fa-solid fa-comment"></i>
+                                    <span>{{object.post_comments.count}}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Alt kısım -->
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <h3>Comments</h3>
+            <div class="card">
+                <div class="card-body">
+                    <!-- Comment section -->
+                    {% if request.user.is_authenticated %}
+
+                    <form method="POST" action="{% url 'posts:comment_create' object.id %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Your Comment:</label>
+                            <hr>
+                            {{comment_form.body}}
+                        </div>
+                        <hr>
+                        <div class="flex d-flex justify-content-center">
+                            <button class="btn btn-primary btn-block" type="submit">Send</button>
+                        </div>
+                    </form>
+
+
+                    {% else %}
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="{% url 'accounts:login' %}" class="btn btn-primary m-3">
+                            Log in to join the discussion!!
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% for comment in object.post_comments.all %}
+                    <div class="mb-3">
+                        <strong>{{comment.created_on}} By {{comment.author}}</strong>
+                        <p>{{comment.body}}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
