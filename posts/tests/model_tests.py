@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.test import TestCase
-from .models import Category, Post, Comment
+from posts.models import Category, Post, Comment
 
 
 class CategoryModelTest(TestCase):
@@ -50,8 +50,8 @@ class CommentModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         """Create a test user, post and comment"""
-        User = get_user_model()
-        user = User.objects.create_user(username="testuser", password="secret")
+        user = get_user_model()
+        user = user.objects.create_user(username="testuser", password="secret")
         post = Post.objects.create(
             title="Test Post",
             body="This is a test post.",
