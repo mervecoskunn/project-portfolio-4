@@ -6,7 +6,7 @@
     <div class="row">
         <!-- Üst kısım -->
         <div class="col-lg-6">
-            <img src="{% static object.image %}"
+            <img src="{{ object.image.url }}"
                  class="img-fluid" alt="Restaurant Image">
         </div>
         <div class="col-lg-6">
@@ -20,6 +20,7 @@
                         {% if request.user.is_authenticated %}
                         <form action="{% url 'posts:like_post' object.id %}" method="POST">
                             {% csrf_token %}
+
                             {% if liked %}
                             <div class="d-flex justify-content-start align-items-center">
                                 <button type="submit" name="post_id" value="{{ object.id }}"
@@ -27,7 +28,12 @@
                                     <i class="fas fa-heart heart-like"></i>
                                     <span>{{object.like.count}}</span>
                                 </button>
+                                <button type="button" class="btn d-flex align-items-center">
+                                    <i class="fa fa-comment"></i>
+                                    <span>{{object.post_comments.count}}</span>
+                                </button>
                                 {% else %}
+
                                 <button type="submit" name="post_id" value="{{ object.id }}"
                                         class="btn d-flex align-items-center">
                                     <i class="far fa-heart heart-like"></i>
@@ -43,8 +49,8 @@
                         {% else %}
                         <i class="fas fa-heart heart-like"></i>
                         <span>{{object.like.count}}</span>
-                             <i class="fa-solid fa-comment"></i>
-                                    <span>{{object.post_comments.count}}</span>
+                        <i class="fa-solid fa-comment"></i>
+                        <span>{{object.post_comments.count}}</span>
                         {% endif %}
                     </div>
                 </div>
