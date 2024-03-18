@@ -182,7 +182,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - Each pages wireframes includes mobile(small screen), tablet(medium screen), desktop(large screens).
     - Home Page:  
-    ![Home page wireframes](documentation/home-page-balsamiq.png)
+    ![Home page](documentation/home-page-balsamiq.png)
 
     - Login Page:
     ![Login page](documentation/login-page-balsamiq.png)
@@ -199,15 +199,12 @@ I designed this platform with desgin thinking approach. With only the necessary 
     - My Page:
       ![My Page](documentation/my-account-page-balsamiq.png)
 
-    - My Posts Page:
-      ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
-    
     - Publish Post Page:
       ![Publish post](documentation/publish-post.png)
     
     - My Publish Page:
      ![My publish page](documentation/my-publish-page-balsamiq.png)
-     
+
 ## Structure
  
 The idea behind the structure of Best Places Of Lund was to simply guide users visiting the site in a clear and understandable way.
