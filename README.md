@@ -186,21 +186,28 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
     - Login Page:
     ![Login page](documentation/login-page-balsamiq.png)
+
     - Register Page:
-      ![Register-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
+      ![Register page wireframes](documentation/register-page-balsamiq.png)
+
     - Category Page:
-      ![Category-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
+      ![Category pages](documentation/restaurant-cafe-bar-page-balsamiq.png)
+
     - Post Page:
-      ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
+      ![Post detail page](documentation/post-detail-balsamiq.png)
+
     - My Page:
-      ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
+      ![My Page](documentation/my-account-page-balsamiq.png)
+
     - My Posts Page:
       ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
-    - All Posts Page:
-      ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
+    
     - Publish Post Page:
-      ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
-
+      ![Publish post](documentation/publish-post.png)
+    
+    - My Publish Page:
+     ![My publish page](documentation/my-publish-page-balsamiq.png)
+     
 ## Structure
  
 The idea behind the structure of Best Places Of Lund was to simply guide users visiting the site in a clear and understandable way.
