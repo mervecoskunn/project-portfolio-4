@@ -25,9 +25,8 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
     - [Frameworks, Libraries \& Tools Used](#frameworks-libraries--tools-used)
   - [Testing](#testing)
 - [Unit Testing](#unit-testing)
-  - [Testing Views:](#testing-views)
-  - [Testing Models:](#testing-models)
-  - [Testing Models:](#testing-models-1)
+  - [Testing :](#testing-)
+  - [Validator Testing:](#validator-testing)
   - [W3C Markup Validation Service](#w3c-markup-validation-service)
   - [CSS Validation Results](#css-validation-results)
   - [PEP8 Python Validator](#pep8-python-validator)
@@ -254,33 +253,30 @@ Comment model handles the content of the comment, the username of the person com
 
 I have used django TestCase for automated testing views, forms and models files.
 
-## Testing Views:
+## Testing : 
 
-- Tested if the views are funcitoning as expected and returns pages that the user needs to be at.
   - Testing Index/Home page view:
-    ![test-index-view-kod-screenshot](/Users/merve/project-portfolio-4/documentation/homepage-test-code.png)
-
-  - Testing Models:
+    ![Test home](documentation/homepage-test-code.png)
+   - Category Model Test:
+    ![Category model test](documentation/category-model-test.pngpost-model-test)
     
-    ![test-post-list-view-kod-screenshot](ekran_goruntusu_dosya_adi.png)
+   - Post Model Test:
+    ![Post model test](documentation/post-model-test.png)
 
-  - Testing Profile Page View: 
-    
-    ![test-profile-view-kod-screenshot](ekran_goruntusu_dosya_adi.png)
- 
-  - Testing Adding Posts / Publish Posts Page View:
-    ![test-adding-posts-kod-screenshot](ekran_goruntusu_dosya_adi.png)
-  
+   - Comment Model Test:
+    ![Comment model test](documentation/comment-model-test.png)
+
+   - PostList View Test:
+    ![Postlist view test](documentation/post-view-test.png) 
+
+   - User Page View Test:
+    ![User page view test](documentation/user-page-test.png)  
+
   - Result:
     ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
-  
-## Testing Models:
 
-  - Models are tested while testing views and forms as well. But in addition, I tested if the models shows that featured image is a requirement and successfully sent to the database:
-    - Result:
-      ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
+## Validator Testing:
 
-## Testing Models:
 - Lighthouse
   - Testing results:
     ![lighthouse-screenshot](ekran_goruntusu_dosya_adi.png)
