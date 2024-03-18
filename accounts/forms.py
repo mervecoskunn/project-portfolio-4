@@ -31,7 +31,6 @@ class RegisterForm(BaseUserCreationForm):
         "placeholder": "Enter your username"
     }))
     email = forms.EmailField(widget=forms.EmailInput(attrs={
-        "autofocus": True,
         "type": "email",
         "class": "form-control",
         "placeholder": "Enter your email"
