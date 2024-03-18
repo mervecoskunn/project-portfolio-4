@@ -5,3 +5,4 @@ pillow
 dj-database-url
 django-storages
 boto3 # for aws
+gunicorn~=20.1
