@@ -182,7 +182,8 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - Each pages wireframes includes mobile(small screen), tablet(medium screen), desktop(large screens).
     - Home Page:  
-      ![Homepage wireframes](documentation/Home-page-balsamiq.png)
+      ![Homepage balsamiq](documentation/home-page-balsamiq.png)
+
     - Login Page:
       ![Login-page-wireframes-screenshots](ekran_goruntusu_dosya_adi.png)
     - Register Page:
