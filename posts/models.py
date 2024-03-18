@@ -20,7 +20,11 @@ class Category(models.Model):
         verbose_name=_('Body'),
         help_text=_('Enter the body of your category.'),
     )
-    image = models.ImageField(upload_to='media/categories/%Y/%m/%d', verbose_name=_('Image'), help_text=_('Image'))
+    image = models.ImageField(
+        upload_to='media/categories/%Y/%m/%d',
+        verbose_name=_('Image'),
+        help_text=_('Image')
+    )
 
     class Meta:
         verbose_name = _('Category')
@@ -32,7 +36,8 @@ class Category(models.Model):
 
 class Post(models.Model):
     """
-    A blog post with a title, body, creation date, modification date, author, and associated categories.
+    A blog post with a title, body, creation date,
+    modification date, author, and associated categories.
     """
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False
@@ -115,7 +120,9 @@ class Comment(models.Model):
         Post,
         on_delete=models.CASCADE,
         related_name='post_comments', verbose_name=_('Post'),
-        help_text=_('Select the post to which this comment will be associated.')
+        help_text=_(
+            'Select the post to which this comment will be associated.'
+        )
     )
     body = models.TextField()
     created_on = models.DateTimeField(

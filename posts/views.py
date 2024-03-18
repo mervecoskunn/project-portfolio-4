@@ -144,7 +144,9 @@ class PostLike(generic.DetailView):
             post.like.remove(request.user)
         else:
             post.like.add(request.user)
-        return HttpResponseRedirect(reverse('posts:post_detail', args=[kwargs.get('post_id')]))
+        return HttpResponseRedirect(
+            reverse('posts:post_detail', 
+                args=[kwargs.get('post_id')]))
 
 
 def category_on_all_pages(request):
