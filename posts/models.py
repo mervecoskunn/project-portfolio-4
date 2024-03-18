@@ -87,6 +87,9 @@ class Post(models.Model):
         related_name='category_posts'
     )
 
+    def summary_body(self):
+        return self.body[:50]
+
     class Meta:
         verbose_name = _('Post')
         verbose_name_plural = _('Posts')
@@ -110,7 +113,7 @@ class Comment(models.Model):
     )
     post = models.ForeignKey(
         Post,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         related_name='post_comments', verbose_name=_('Post'),
         help_text=_('Select the post to which this comment will be associated.')
     )
@@ -128,26 +131,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.post.__str__()
-
-
-class Notification(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    title = models.CharField(
-        max_length=255,
-        verbose_name=_('Title'),
-        help_text=_('Enter the title of your post.'),
-    )
-    body = models.TextField(
-        verbose_name=_('Body'),
-        help_text=_('Enter the body of your post.'),
-    )
-    created_on = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name=_('Created On'),
-        help_text=_('The date and time the post was created.'),
-    )
-
-    class Meta:
-        verbose_name = _('Notification')
-        verbose_name_plural = _('Notifications')
-        ordering = ('-created_on',)

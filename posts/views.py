@@ -65,7 +65,7 @@ class PostDeleteView(generic.DeleteView):
     template_name = 'posts/post_delete.html'
 
     def get_success_url(self):
-        return reverse('posts:user_page', args=[self.request.user.id])
+        return reverse('posts:manage_posts', args=[self.request.user.id])
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
@@ -149,7 +149,3 @@ class PostLike(generic.DetailView):
 
 def category_on_all_pages(request):
     return {'categories': models.Category.objects.all()}
-
-
-def notification_on_all_pages(request):
-    return {'notifications': models.Notification.objects.all()}

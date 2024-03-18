@@ -1,15 +1,7 @@
-asgiref==3.7.2
-distlib==0.3.8
-dj-database-url==0.5.0
-Django==4.2.11
-filelock==3.13.1
-gunicorn==20.1.0
-pillow==10.2.0
-platformdirs==4.2.0
-psycopg2==2.9.9
-python-decouple==3.8
-python-dotenv==1.0.1
-setuptools==69.1.1
-sqlparse==0.4.4
-virtualenv==20.25.1
+django
+django-decouple
+psycopg2-binary
+pillow
 dj-database-url
+django-storages
+boto3 # for aws
