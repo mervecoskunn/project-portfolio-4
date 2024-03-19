@@ -317,7 +317,7 @@ I have used django TestCase for automated testing views, forms and models files.
 
   The CSS validation results for the files used in the project are as follows:
     - Styles.css:
-     ![css validation](/Users/merve/project-portfolio-4/documentation/css.png)
+     ![css validation](documentation/css.png)
 
   ## PEP8 Python Validator
   - No errors or warnings found.
