@@ -290,19 +290,19 @@ I have used django TestCase for automated testing views, forms and models files.
 ## W3C Markup Validation Service
 - Home Page:
   - index.html:
-  ![home page screenshot](/Users/merve/project-portfolio-4/documentation/index.png) 
+  ![home page screenshot](documentation/index.png)
 
   - pages/account/index.html:
-    ![pages account screenshot](/Users/merve/project-portfolio-4/documentation/account.png)
+    ![pages account screenshot](documentation/account.png)
 
   - pages/actions/post-create.html:
-    ![result-terminal-screenshot](/Users/merve/project-portfolio-4/documentation/post-create.png)
+    ![result-terminal-screenshot](documentation/post-create.png)
 
   - pages/actions/post-edit.html:
-     ![result-terminal-screenshot](/Users/merve/project-portfolio-4/documentation/post-edit.png)
+     ![result-terminal-screenshot](documentation/post-edit.png)
 
   - pages/actions/posts.html:
-    ![result-terminal-screenshot](/Users/merve/project-portfolio-4/documentation/posts.png)
+    ![result-terminal-screenshot](documentation/posts.png)
 
   - pages/categories/bar/index.html:
     ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
