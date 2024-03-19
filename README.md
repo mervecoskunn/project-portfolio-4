@@ -305,13 +305,13 @@ I have used django TestCase for automated testing views, forms and models files.
     ![result-terminal-screenshot](documentation/posts.png)
 
   - pages/categories/bar/index.html:
-    ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![bar html validation](documentation/bar-html-validation.png)
 
   - pages/categories/cafe/index.html:
-    ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![cafe html validation](documentation/cafe-html-validation.png)
   
-  - pages/categories/bar/index.html:
-    ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
+  - pages/categories/restaurant/index.html:
+    ![restaurant html validation](documentation/restaurant-html-validation.png)
   
   ## CSS Validation Results
 
