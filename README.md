@@ -485,11 +485,21 @@ I have followed Code Institute's [Django Blog Cheat Sheet](chrome-extension://ef
        
 
 ## Credits
+- The contents in the posts were taken from the relevant websites.
+- These site links are attached to the post detail page.
+- Some content was written only by me.
+- Photos used were taken from [www.pexels.com](https://www.pexels.com/)
+- and some photos were taken from websites, they are free
 
 ## Acknowledgements
 
+This project was created for Portfolio Project #4 (Full-Stack Tolkit) - Diploma in Full Stack Software Development Diploma at the Code Institute. I would like to thank my mentor Precious Ijege for relevant feedback during the project.
+
+Merve COSKUN, 2024
 
 
 
 
-[def]: documentation/cafe-page-screenshot.png
+
+
+
