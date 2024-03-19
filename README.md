@@ -264,7 +264,7 @@ I have used django TestCase for automated testing views, forms and models files.
   - Testing Index/Home page view:
     ![Test home](documentation/homepage-test-code.png)
    - Category Model Test:
-    ![Category model test](documentation/category-model-test.pngpost-model-test)
+    ![Category model test](documentation/category-model-test.png)
     
    - Post Model Test:
     ![Post model test](documentation/post-model-test.png)
