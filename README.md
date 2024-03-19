@@ -71,7 +71,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
 - Home Page
   - Three posts representing categories were shared on the home page, so that users could access short and clear information about the site, and were supported with visuals. If the user wishes, they can easily list the posts belonging to the relevant category by clicking the button below. A short and clear guidance has been added on the screen so that they can Login/Register and like comments.
   
-  ![Home page ](ekran_goruntusu_dosya_adi.png)
+  ![Home Page](documentation/homepage-features.png)
 
   - When the visitor clicks on any category selected, it goes to the relevant category. 
 
