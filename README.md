@@ -75,51 +75,54 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - When the visitor clicks on any category selected, it goes to the relevant category. 
 
-  ![categori ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+  - Anyone who visits the page, whether they are a user or not, can go directly to the category if they click on the "Read More" button on the category posts on the main page.
+    ![read more button](documentation/read-more-screenshots.png)
 
   - Visitor can create an account by clicking on login/register from the menu or from the button below.
-    
-  ![home-pagetekilogin butonu alttaki ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
 
-  ![home-pageteki login/register menudeki ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+  ![login-register-section](documentation/menu-login-register.png)
 
 - Categories
   
   - When visitors click on the categories option in the menu, we encounter a dropdown menu and from there the visitors can select the option visitor wants and list the relevant posts.
   
-  ![categories dropdown menu menudeki ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+  ![category select](documentation/category-select.png)
 
-- Restaurant Cafe Bar Page
+- Restaurant/Cafe/Bar Page
   
   - When the relevant category is selected, relevant posts are sorted.
-   
-   ![restaurant/cafe/bar dan birisinin ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+   - Restaurant Page
+   ![restaurant-page](documentation/restaurant-screenshot.png)
+   - Cafe Page
+    ![cafe-page](documentation/cafe-page-screenshot.png)
+   - Bar Page
+    ![bar-page](documentation/bar-page-screenshot.png)
 
-- One Post Page
+- Post Detail Page
   
   - When visitor click on one of the listed posts, it will be seen in detail. If the visitor wants to comment or like, visitor must log in or register.
    
-   ![post page ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+   ![post detail page ](documentation/post-detail-page-screenshot.png)
 
 - Login Page
   
   - Visitor can login from the Login tab in the menu and comment, like or post can be shared.
   
-  ![Login page ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+   ![login page](documentation/login-screenshot.png)
 
 - Register Page
   
   - A new account can be created from the register tab in the menu and thus can log in and use user features.
   
-  ![Register page ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+   ![register page](documentation/register-screnshot.png)
 
 - My Page
  
   - On the My page, the user sees 3 buttons to navigate easily.
-  - User can share new posts, view own posts, and edit or delete them if user wishes. If user clicks on the title of own post, user can view own post in detail.
+  - User can share new posts, view own posts, and edit or delete them if user wishes when user click the manage my posts button. If user clicks on the title of own post, user can view own post in detail.
   - User can log out using the logout button.
   
-  ![My page ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+  ![My page](documentation/my-page-screenshot.png)
 
 - Publish a Post 
 
@@ -129,7 +132,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - The user must enter a title, catogory, content and image.
   
-  ![Publish post ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+  ![Publish post page](documentation/publish-post-screenshot.png)
 
   - Once the post is published, the post is submitted for approval to the admin. The submitted post can be viewed/edited/deleted by the owner from 'Manage my posts Page'.
 
@@ -149,18 +152,20 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - The authenticated and owner of the post can only edit the post.
   - The posts that are selected for editing are prepopulated form that is ready for editing.
 
-   ![Edit page ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+   ![Edit page](documentation/edit-page-screenshot.png)
  
 - Delete a Post
 
    - The authenticated and owner of the post can only delete the post.
    - The posts that are chosen to be deleted asks the user for confirmation by pop-up alert on the window.  
-  
+   ![Delete button](documentation/delete-button-post.png)
+
 - Like and Comment on a Post 
 
   - All the site visiters can view the comments and the number of likes.
 
   - The unregistered site visiters cannot view the comment box to write a comment. Once they register, then it is visible for them and they can post a comment on any post they want.
+  ![comment button](documentation/comment-section.png)
 
 - Logout
  
@@ -169,7 +174,8 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - When the user wants to logout a pop-up modal is triggered for confirmation.
 
   - The logout modal asks the user if they confirm to logout. 
-  
+  ![logout section](documentation/logout-screenshot.png)
+
 ## Future Features
 
  - Connect with Google translate API, so users can submit posts from different languages and also translate to language they want.
@@ -212,7 +218,7 @@ Color confusion and unnecessary information were avoided
 Throughout the project development, GitHub projects is used. Click[here](https://github.com/users/mervecoskunn/projects/7) to view the process.
 
 ## Databases
-!!!! DATABESE EKLE BURAYA !!!!
+![Database Diagram](documentation/database_schema.png)
 
 ### Post Model
 
@@ -317,40 +323,37 @@ I have used django TestCase for automated testing views, forms and models files.
   - No errors or warnings found.
    
   - models.py:
-    ![pep8-online-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![post model.py pep8 ](documentation/posts-model-py-screenshot.png)
   
   - admin.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![posts admin.py pep8](documentation/posts-admin-pep8.png)
 
-  - posts.url:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)  
+  - posts urls.py:
+    ![posts urls.py-screenshot](documentation/posts-urls-pt-screenshot.png)  
 
   - views.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![posts views.py pep8](documentation/posts-view-py-screenshot.png)
   
   - forms.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![posts forms.py pep8](documentation/posts-forms-py-screenshot.png)
    
-  - test_views.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+  - home_tests.py:
+    ![home test.py](documentation/home-test-py-screenshot.png)
   
-  - test_models.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+  - model-tests.py:
+    ![model-test.py-screenshot](documentation/post-model-test.png)
   
-  - views.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
-
-  - test_forms.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+  - pages.py-test:
+    ![pages-test](documentation/pages-test-py-screenshot.png)
 
   - apps.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)  
+    ![apps.py-screenshot](documentation/apps-py-screenshot.png)  
   
   - asgi.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![asgi.py-screenshot](documentation/asgi-py-screenshot.png)
 
   - project-urls.py:
-    ![admin.py-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![project urls.py pep8](documentation/project-urls-py-screecshot.png)
 
 ## BUGS
  !!!!BURAYI YAP !!!
@@ -487,3 +490,6 @@ I have followed Code Institute's [Django Blog Cheat Sheet](chrome-extension://ef
 
 
 
+
+
+[def]: documentation/cafe-page-screenshot.png
