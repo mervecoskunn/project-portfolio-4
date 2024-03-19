@@ -465,11 +465,11 @@ I have followed Code Institute's [Django Blog Cheat Sheet](chrome-extension://ef
    ![config var.png](ekran_goruntusu_dosya_adi.png)
 
   #### Attach the Database: 
-  1. Create new env.py file on top level directory
-  - In env.py
-  1. Import os library : import os
-  2. Set environment variables: os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
-  3. Add in secret key: os.environ["SECRET_KEY"] = "Make up a randomSecretKey"
+  - Create new env.py file on top level directory
+   In env.py
+  - Import os library : import os
+  - Set environment variables: os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
+  - Add in secret key: os.environ["SECRET_KEY"] = "Make up a randomSecretKey"
   
   - In Heroku.com
   
