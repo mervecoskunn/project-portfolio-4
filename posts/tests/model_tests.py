@@ -8,7 +8,8 @@ class CategoryModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         """Create a test category"""
-        Category.objects.create(name="Test Category", body="This is a test category.")
+        Category.objects.create(name="Test Category",
+                                body="This is a test category.")
 
     def test_category_name(self):
         """Test that the category name is correctly set"""
@@ -26,8 +27,8 @@ class PostModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         """Create a test user and post"""
-        user = get_user_model()
-        user = user.objects.create_user(username="testuser", password="secret")
+        user = get_user_model().objects.create_user
+        (username="testuser", password="secret")
         Post.objects.create(
             title="Test Post",
             body="This is a test post.",
@@ -50,14 +51,15 @@ class CommentModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         """Create a test user, post and comment"""
-        user = get_user_model()
-        user = user.objects.create_user(username="testuser", password="secret")
+        user = get_user_model().objects.create_user
+        (username="testuser", password="secret")
         post = Post.objects.create(
             title="Test Post",
             body="This is a test post.",
             author=user,
         )
-        Comment.objects.create(author=user, post=post, body="This is a test comment.")
+        Comment.objects.create(author=user, post=post,
+                               body="This is a test comment.")
 
     def test_comment_body(self):
         """Test that the comment body is correctly set"""
