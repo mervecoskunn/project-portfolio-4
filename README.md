@@ -35,10 +35,18 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
   - [Deployment](#deployment)
     - [Steps to Deployment:](#steps-to-deployment)
     - [In the terminal](#in-the-terminal)
+    - [In the setting.py](#in-the-settingpy)
     - [In the terminal](#in-the-terminal-1)
     - [Step 2: Deploying an app to Heroku](#step-2-deploying-an-app-to-heroku)
       - [Create the Heroku app](#create-the-heroku-app)
       - [Attach the Database:](#attach-the-database)
+    - [In settings.py](#in-settingspy)
+    - [In the terminal](#in-the-terminal-2)
+    - [Get our static and media files stored on Amazon:](#get-our-static-and-media-files-stored-on-amazon)
+      - [On Amazon](#on-amazon)
+      - [In env.py](#in-envpy)
+      - [In Heroku](#in-heroku)
+      - [In settings.py](#in-settingspy-1)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 
@@ -454,7 +462,7 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
   * Create Project	django-admin startproject PROJ_NAME . (Don’t forget the . )
   * Create App	python3 manage.py startapp APP_NAME
   
-  - In the setting.py
+  ### In the setting.py
   
   * Add to installed: apps	‘APP_NAME’,
    
@@ -470,18 +478,21 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
   - Prepare our environment and settings.py file
   - Get our static and media files stored on
  
-  Cloudinary
+ 
 
   #### Create the Heroku app
   1. Create new Heroku App
    ![create-heroku-app.png](documentation/create-new-app.png)
+
   2. Add Database to App Resources - Located in the Resources Tab, Add-ons, search andadd e.g. ‘Heroku Postgres’
-   ![create-heroku-app.png](ekran_goruntusu_dosya_adi.png)
+   ![add heroku ons](documentation/heroku-add-ons.png)
+
   3. Copy DATABASE_URL - Located in the Settings Tab, in Config Vars, Copy Text
    
-   ![config var.png](ekran_goruntusu_dosya_adi.png)
+   ![config var.png](documentation/config-var.png)
 
   #### Attach the Database: 
+
   - Create new env.py file on top level directory
    In env.py
   - Import os library : import os
@@ -492,15 +503,38 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
   
     - Add Secret Key to Config Vars: SECRET_KEY, “randomSecretKey”
   
-  - In settings.py
+  ### In settings.py
+  
     - Reference env.py
     - Remove the insecure secret key and replace - links to the secret key variable on Heroku
     - Replace DATABASES Section (Comment out the old DataBases Section) - links to the DATATBASE_URL variable on Heroku 
+  
+  ### In the terminal
+   - Make Migration: 
+    - python3 manage.py migrate
+  
+  ### Get our static and media files stored on Amazon:
+  #### On Amazon
+  
+  - Copy your Amazon_URL from Amazon Dashboard
+  
+  #### In env.py
+  - Add Amazon URL to env.py - be sure to paste in the correct section of the link
 
+  #### In Heroku
 
-  - !!!!! Herokunun steplerini tek tek yaz!!!!
-       
+ - Add Amazon URL to Heroku Config Vars - be sure to paste in the correct section of the link
+ - Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, must be removed before deployment)
+  ![disable_collecstatic](documentation/DISABLE_COLLECTSTATIC.png)
 
+  #### In settings.py
+
+  - Add Amazon Libraries to installed apps (note: order is important)
+  - Tell Django to use Amazon to store media and static files. Place under the Static files Note
+  - Link file to the templates directory in Heroku. Place under the BASE_DIR line
+  -  Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array
+  -  	Add Heroku Hostname to ALLOWED_HOSTS
+ 
 ## Credits
 - The contents in the posts were taken from the relevant websites.
 - These site links are attached to the post detail page.
