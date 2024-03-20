@@ -48,6 +48,10 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
       - [In env.py](#in-envpy-1)
       - [In Heroku](#in-heroku)
       - [In settings.py](#in-settingspy-1)
+    - [In Gitpod](#in-gitpod)
+    - [In Procfile](#in-procfile)
+    - [In Terminal](#in-terminal)
+    - [In Heroku](#in-heroku-1)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 
@@ -485,13 +489,13 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
   1. Create new Heroku App
    ![create-heroku-app.png](documentation/create-new-app.png)
 
-  2. Add Database to App Resources - Located in the Resources Tab, Add-ons, search andadd e.g. ‘Heroku Postgres’
-   ![add ons heroku](documentation/heroku-add-ons.png)
-
-  3. Copy DATABASE_URL - Located in the Settings Tab, in Config Vars, Copy Text
+  2.  Copy DATABASE_URL - Located in the Settings Tab, in Config Vars, Copy Text
    
    ![config var](documentation/config-var.png)
 
+  3. Add Database url link as confiq vars on Heroku from ElephantSQL
+   ![add database heroku](documentation/database-link.png)
+  
   #### Attach the Database: 
 
   - Create new env.py file on top level directory
@@ -535,16 +539,52 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
   - Add Amazon Libraries to installed apps (note: order is important)
   - Tell Django to use Amazon to store media and static files. Place under the Static files Note
   - Link file to the templates directory in Heroku. Place under the BASE_DIR line
-  -  Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array
-  -  	Add Heroku Hostname to ALLOWED_HOSTS
- 
+  - Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array
+  - Add Heroku Hostname to ALLOWED_HOSTS
+  
+  ### In Gitpod
+
+  - Create 3 new folders on top level directory
+   - media, static, templates 
+  - Create procfile on the top level directory
+   - Procfile
+  
+  ### In Procfile
+
+  - Add code
+   - web: gunicorn PROJ_NAME.wsgi
+  
+  ### In Terminal
+
+  - Add, Commit and Push
+   - git add .
+   - git commit -m “Deployment Commit”
+   - git push
+  
+  ### In Heroku
+  - Deploy Content manually through heroku/
+  - E.g Github as deployment method, on main branch
+  ![heroku deploy manuel](documentation/heroku-deploy-manuel.png)
+
+  Before the final Deployement: Remove the "DISABLE_COLLECTSTATIC" from Heroku Config vars, and Change Debug to "False" in settings.py
+
 ## Credits
+
 - The contents in the posts were taken from the relevant websites.
 - These site links are attached to the post detail page.
 - Some content was written only by me.
 - Photos used were taken from [www.pexels.com](https://www.pexels.com/)
 - and some photos were taken from websites, they are free
+- [Stack Overflow](https://stackoverflow.com/)
+- [Django project documentation](https://www.djangoproject.com/)
+- [Code Institute](https://codeinstitute.net/se/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Django Allauth](https://docs.allauth.org/en/latest/)
+- [Coolors](https://coolors.co/) color palette.
+  ![colors](documentation/colors.png)
+- [Am I Responsive](https://ui.dev/amiresponsive) 
 
+ 
 ## Acknowledgements
 
 This project was created for Portfolio Project #4 (Full-Stack Tolkit) - Diploma in Full Stack Software Development Diploma at the Code Institute. I would like to thank my mentor Precious Ijege for relevant feedback during the project.
