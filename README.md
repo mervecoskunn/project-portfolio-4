@@ -356,7 +356,13 @@ I have used django TestCase for automated testing views, forms and models files.
     ![project urls.py pep8](documentation/project-urls-py-screecshot.png)
 
 ## BUGS
- !!!!BURAYI YAP !!!
+ - I encountered a few errors during HTML validator testing and they were resolved.
+  
+  ![html validator bugs](documentation/bugs/restaurants-1.png)  
+
+  ![html validator bugs](documentation/bugs/restaurants-2.png) 
+
+  ![html validator bugs](documentation/bugs/restaurants-3.png)
 
 ## User Story Testing
 
