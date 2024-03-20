@@ -356,7 +356,7 @@ I have used django TestCase for automated testing views, forms and models files.
     ![project urls.py pep8](documentation/project-urls-py-screecshot.png)
 
 ## BUGS
- - I encountered a few errors during HTML validator testing and they were resolved.
+ - I encountered a few errors on restaurant /cafe/bar html files during HTML validator testing and they were resolved.
   
   ![html validator bugs](documentation/bugs/restaurants-1.png)  
 
@@ -373,35 +373,36 @@ I have used django TestCase for automated testing views, forms and models files.
 
   - As a Site Admin I can aproove Posts before it is published so that the site content will be consistent. 
    
-    ![admin-page-django-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![admin-page-django-screenshot](documentation/admin-page-screenshot.png)
 
   - Member User
     - As a Member User I can register an account so that I can manage my posts, comment and like.  
-    ![sign-up-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![sign-up-screenshot](documentation/register-screnshot.png)
 
     - As a Member User I can post/add/edit/delete posts so that I can share and manage my posts.
-    ![my-account-page-screenshot](ekran_goruntusu_dosya_adi.png)  
+    ![my-account-page-screenshot](documentation/my-page-screenshot.png)  
   
     - As a Member User I can like or unlike a post so that I can interact with the content.
 
     - As a Member User I can leave comments on a post so that I can be involved in the conversation.
   
-   ![comment-section-screenshot](ekran_goruntusu_dosya_adi.png)
+   ![comment-section-screenshot](documentation/comment-section.png)
 
     - As a Member User I can view my posts status of approval so that I can manage my posts.
-     ![manage-my-post-screenshot](ekran_goruntusu_dosya_adi.png)
+     ![manage-my-post-screenshot](documentation/edit-page-screenshot.png)
+    
 
   - General User
     - As a Site User I can view a list of posts so that I can select one to read.
       
-    ![home-page-screenshot](ekran_goruntusu_dosya_adi.png)     
+    ![home-page-screenshot](documentation/restaurant-screenshot.png)    
   
     - As a Site User I can click on a post so that I can read the full text.
-     ![one-post-screenshot](ekran_goruntusu_dosya_adi.png)
+     ![one-post-screenshot](documentation/post-detail-page-screenshot.png)
 
     - As a Site User / Admin user I can view comments on an individual post so that I can read the conversation.
     - As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral. 
-    ![one-post-commentscreenshot](ekran_goruntusu_dosya_adi.png)
+    ![one-post-commentscreenshot](documentation/comment-section.png)
 
   - Browser Compatability
     - Checked and verified that the site works on different browsers.
