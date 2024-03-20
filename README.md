@@ -377,7 +377,7 @@ I have used django TestCase for automated testing views, forms and models files.
 
   - Member User
     - As a Member User I can register an account so that I can manage my posts, comment and like.  
-    ![sign-up-screenshot](documentation/register-screnshot.png)
+    ![sign-up-screenshot](documentation/login-screenshot.png)
 
     - As a Member User I can post/add/edit/delete posts so that I can share and manage my posts.
     ![my-account-page-screenshot](documentation/my-page-screenshot.png)  
