@@ -583,8 +583,8 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
 - [Coolors](https://coolors.co/) color palette.
   ![colors](documentation/colors.png)
 - [Am I Responsive](https://ui.dev/amiresponsive) 
+- [AWS](https://aws.amazon.com/console/)
 
- 
 ## Acknowledgements
 
 This project was created for Portfolio Project #4 (Full-Stack Tolkit) - Diploma in Full Stack Software Development Diploma at the Code Institute. I would like to thank my mentor Precious Ijege for relevant feedback during the project.
