@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="col-md-6">
-    <div class="card">
+    <div class="login-card">
         <h2 class="card-header text-center">Login</h2>
         <div class="card-body">
             <form method="POST">
@@ -17,8 +17,10 @@
                     <label>Password</label>
                     {{form.password}}
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
-                <p class="message">Create an account? <a href="{% url 'accounts:register' %}">Register</a></p>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <button type="submit" class="btn btn-primary btn-block mt-2">Login</button>
+                    <p class="message">Create an account? <a href="{% url 'accounts:register' %}">Register</a></p>
+                </div>
             </form>
         </div>
     </div>

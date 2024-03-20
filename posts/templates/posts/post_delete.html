@@ -9,7 +9,7 @@
                 {{ form }}
                 {% csrf_token %}
                 <strong>Are you sure about deleting the post:<br>
-                    "{{ post.body | truncatechars:250 }}"
+                    "{{ post.title }}"
                     <br>This action cannot be undone!</strong>
                 <br>
                 <a href="{% url 'posts:manage_posts' request.user.id %}" class="btn btn-outline-secondary btn-sm">Cancel</a>
