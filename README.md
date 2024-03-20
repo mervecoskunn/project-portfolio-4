@@ -40,11 +40,12 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
     - [Step 2: Deploying an app to Heroku](#step-2-deploying-an-app-to-heroku)
       - [Create the Heroku app](#create-the-heroku-app)
       - [Attach the Database:](#attach-the-database)
+      - [In env.py](#in-envpy)
     - [In settings.py](#in-settingspy)
     - [In the terminal](#in-the-terminal-2)
     - [Get our static and media files stored on Amazon:](#get-our-static-and-media-files-stored-on-amazon)
       - [On Amazon](#on-amazon)
-      - [In env.py](#in-envpy)
+      - [In env.py](#in-envpy-1)
       - [In Heroku](#in-heroku)
       - [In settings.py](#in-settingspy-1)
   - [Credits](#credits)
@@ -485,16 +486,18 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
    ![create-heroku-app.png](documentation/create-new-app.png)
 
   2. Add Database to App Resources - Located in the Resources Tab, Add-ons, search andadd e.g. ‘Heroku Postgres’
-   ![add heroku ons](documentation/heroku-add-ons.png)
+   ![add ons heroku](documentation/heroku-add-ons.png)
 
   3. Copy DATABASE_URL - Located in the Settings Tab, in Config Vars, Copy Text
    
-   ![config var.png](documentation/config-var.png)
+   ![config var](documentation/config-var.png)
 
   #### Attach the Database: 
 
   - Create new env.py file on top level directory
-   In env.py
+ 
+   #### In env.py
+
   - Import os library : import os
   - Set environment variables: os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
   - Add in secret key: os.environ["SECRET_KEY"] = "Make up a randomSecretKey"
