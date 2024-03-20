@@ -583,7 +583,7 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
 - [Coolors](https://coolors.co/) color palette.
   ![colors](documentation/colors.png)
 - [Am I Responsive](https://ui.dev/amiresponsive) 
-- [AWS](https://aws.amazon.com/console/)
+- [AWS](https://aws.amazon.com/console/) I used AWS, another option used like Claudinary. Because I already use it. 
 
 ## Acknowledgements
 
