@@ -341,7 +341,7 @@ I have used django TestCase for automated testing views, forms and models files.
     ![home test.py](documentation/home-test-py-screenshot.png)
   
   - model-tests.py:
-    ![model-test.py-screenshot](documentation/post-model-test.png)
+    ![model-test.py-screenshot](documentation/model-py-screenshot.png)
   
   - pages.py-test:
     ![pages-test](documentation/pages-test-py-screenshot.png)
