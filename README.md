@@ -430,10 +430,10 @@ This project was deployed to Heroku. "Heroku is a cloud platform that lets compa
 
 - Steps to open account in Heroku:
   - [Signup here](https://signup.heroku.com/) if you do not have an account already.
-  - ![signup-heroku.png](ekran_goruntusu_dosya_adi.png)
+  - ![signup-heroku.png](documentation/signup-heroku.png)
   - After you fill in all the information for account and sign in, you will be on [Dashbord](https://id.heroku.com/login). Here is where you will create an application. 
   - Click on New => Create new app.
-    ![new-app.png](ekran_goruntusu_dosya_adi.png)
+    ![new-app.png](documentation/new-app.png)
   - Choose a name to your application and select location that you are based.
   
 - Steps to Deployment: 
@@ -464,7 +464,7 @@ I have followed Code Institute's [Django Blog Cheat Sheet](chrome-extension://ef
   - Get our static and media files stored on Cloudinary
   #### Create the Heroku app
   1. Create new Heroku App
-   ![create-heroku-app.png](ekran_goruntusu_dosya_adi.png)
+   ![create-heroku-app.png](documentation/create-new-app.png)
   2. Add Database to App Resources - Located in the Resources Tab, Add-ons, search andadd e.g. ‘Heroku Postgres’
    ![create-heroku-app.png](ekran_goruntusu_dosya_adi.png)
   3. Copy DATABASE_URL - Located in the Settings Tab, in Config Vars, Copy Text
