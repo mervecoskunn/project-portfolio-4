@@ -33,6 +33,10 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
   - [BUGS](#bugs)
   - [User Story Testing](#user-story-testing)
   - [Deployment](#deployment)
+    - [Steps to Deployment:](#steps-to-deployment)
+    - [In the terminal](#in-the-terminal)
+    - [In the terminal](#in-the-terminal-1)
+    - [Step 2: Deploying an app to Heroku](#step-2-deploying-an-app-to-heroku)
       - [Create the Heroku app](#create-the-heroku-app)
       - [Attach the Database:](#attach-the-database)
   - [Credits](#credits)
@@ -436,32 +440,38 @@ This project was deployed to Heroku. "Heroku is a cloud platform that lets compa
     ![new-app.png](documentation/new-app.png)
   - Choose a name to your application and select location that you are based.
   
-- Steps to Deployment: 
+### Steps to Deployment: 
 
-I have followed Code Institute's [Django Blog Cheat Sheet](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf) steps to follow, create and deploy the project on Herokuapps.
+I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf) steps to follow, create and deploy the project on Herokuapps.
 - Step 1: Installing Django and supporting libraries 
-- In the terminal
+
+ ### In the terminal
      
-  1. Install Django and gunicorn: pip3 install django gunicorn
-  2. Install supporting libraries:	pip3 install dj_database_url psycopg2
-  3. Install Cloudinary Libraries	pip3 install dj3-cloudinary-storage
-  4. Create requirements file	pip3 freeze --local > requirements.txt
-  5. Create Project	django-admin startproject PROJ_NAME . (Don’t forget the . )
-  6. Create App	python3 manage.py startapp APP_NAME
+  * Install Django and gunicorn: pip3 install django gunicorn
+  * Install supporting libraries:	pip3 install dj_database_url psycopg2
+  * Install Cloudinary Libraries	pip3 install dj3-cloudinary-storage
+  * Create requirements file	pip3 freeze --local > requirements.txt
+  * Create Project	django-admin startproject PROJ_NAME . (Don’t forget the . )
+  * Create App	python3 manage.py startapp APP_NAME
   
   - In the setting.py
   
-  7. Add to installed: apps	‘APP_NAME’,
+  * Add to installed: apps	‘APP_NAME’,
    
-  - In the terminal
-  8. Migrate Changes: python3 manage.py migrate
-  9. Run Server to Test: python3 manage.py runserver
+ ### In the terminal
+  
+  * Migrate Changes: python3 manage.py migrate
+  * Run Server to Test: python3 manage.py runserver
 
-- Step 2: Deploying an app to Heroku
+ ### Step 2: Deploying an app to Heroku
+
   - Create the Heroku app
   - Attach the database
   - Prepare our environment and settings.py file
-  - Get our static and media files stored on Cloudinary
+  - Get our static and media files stored on
+ 
+  Cloudinary
+
   #### Create the Heroku app
   1. Create new Heroku App
    ![create-heroku-app.png](documentation/create-new-app.png)
