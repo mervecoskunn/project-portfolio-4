@@ -44,11 +44,11 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
     - [In settings.py](#in-settingspy)
     - [In the terminal](#in-the-terminal-2)
     - [Get our static and media files stored on Amazon:](#get-our-static-and-media-files-stored-on-amazon)
-      - [On Amazon](#on-amazon)
+      - [On Amazon web service](#on-amazon-web-service)
       - [In env.py](#in-envpy-1)
       - [In Heroku](#in-heroku)
       - [In settings.py](#in-settingspy-1)
-    - [In Gitpod](#in-gitpod)
+    - [In Visual Studio Code](#in-visual-studio-code)
     - [In Procfile](#in-procfile)
     - [In Terminal](#in-terminal)
     - [In Heroku](#in-heroku-1)
@@ -235,6 +235,9 @@ Color confusion and unnecessary information were avoided
 Throughout the project development, GitHub projects is used. Click[here](https://github.com/users/mervecoskunn/projects/7) to view the process.
 
 ## Databases
+
+[pgadmin4](https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html)- I created database schema with pgadmin4.
+
 ![Database Diagram](documentation/database_schema.png)
 
 ### Post Model
@@ -256,14 +259,14 @@ Comment model handles the content of the comment, the username of the person com
   * Bootstrap 5 - grid, layout, columns, cards and forms structure.
   * Django - django frameworks to manage apps.
   * GitHub - to store the overall project repository.
-  * GitPod - used as workspace to do the coding.
+  * Visual Studio Code - used as workspace to do the coding.
   * Balsamiq Wireframes - To design the wireframe of the complete project.
   * Google Fonts - Used for logo and all the written content.
   * Fontawesome - fontawesome icons for social media links and as additional design.
   * Heroku - for the deployement of the project.
   * Coolors - to choose the color palette and color shades.
   * PostgreSQL - database storage of the models.
-  * Amazon - image and static files storage.
+  * Amazon Web Service - image and static files storage.
   * AmIResponsinve - responsiveness of the site.
   * Lighthouse - used for testing site functionality.
   * W3C Markup Validation Service - used for HTML testing.
@@ -521,7 +524,7 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
     - python3 manage.py migrate
   
   ### Get our static and media files stored on Amazon:
-  #### On Amazon
+  #### On Amazon web service
   
   - Copy your Amazon_URL from Amazon Dashboard
   
@@ -542,7 +545,7 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
   - Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array
   - Add Heroku Hostname to ALLOWED_HOSTS
   
-  ### In Gitpod
+  ### In Visual Studio Code
 
   - Create 3 new folders on top level directory
    - media, static, templates 
