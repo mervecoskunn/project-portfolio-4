@@ -323,7 +323,7 @@ I have used django TestCase for automated testing views, forms and models files.
 
 - Lighthouse
   - Testing results:
-    ![lighthouse-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![lighthouse-screenshot](documentation/lighthouse.png)
 
 ## W3C Markup Validation Service
 - Home Page:
