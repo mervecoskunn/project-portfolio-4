@@ -161,7 +161,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - Finally, buttons for editing and deleting options are provided for user management.
   - After the post is published, it is submitted to the administrator for approval. The submitted post can be viewed/edited/deleted by its owner from the 'Manage My Post'.
    
-   ![Manage my posts ekran goruntusu ](ekran_goruntusu_dosya_adi.png)
+   ![Manage my posts](documentation/manage-my-post.png)
 
 - Edit Page
    
