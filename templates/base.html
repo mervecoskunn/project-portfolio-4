@@ -13,13 +13,13 @@
     <title>Responsive App Bar</title>
 </head>
 <body>
-<div class="container">
+<div class="w-full">
 
     {% include 'navbar.html' %}
 
     <!-- Main Content Begin Code -->
     <main>
-        <div class="w-full d-flex justify-content-center align-items-center p-1"
+        <div class="container-md d-flex justify-content-center align-items-center p-1"
              style="min-height: calc(100vh - 200px)">
             <div class="row justify-content-center align-items-center" style="width: 100%">
                 {% block content %}

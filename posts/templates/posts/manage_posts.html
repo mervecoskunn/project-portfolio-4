@@ -2,37 +2,46 @@
 {% load static %}
 
 {% block content %}
-<div class="row justify-content-start align-items-center">
-    {% if object_list.count %}
-    {% for post in object_list %}
 
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <a href="" class="d-flex align-items-center justify-content-center m-3 mb-lg-0 text-dark text-decoration-none">
+            <span class="fs-4">Manage My Posts</span>
+        </a>
+    </div>
+</div>
+
+<div class="row justify-content-center align-items-center">
+    {% for post in object_list %}
     <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                <img
-                        src="{{ post.image.url }}"
-                        alt="Cart Icon" class="img-fluid" style="min-height: 250px;">
-            </div>
-            <div class="card-body">
-                <!-- Cart Content -->
-                <h5 class="card-title">{{post.title}}</h5>
-                <p class="card-text">{{post.body | truncatechars:100 }}</p>
-                <div class="d-flex flex-row justify-content-end">
-                    <a href="{% url 'posts:post_edit' post.id %}" class="btn btn-primary btn-sm">Edit</a>
-                    <!-- Delete Button -->
-                    <a href="{% url 'posts:post_delete' post.id %}" type="button" class="btn btn-danger"
-                       data-bs-toggle="modal"
-                       data-bs-target="#confirmDeleteModal">Delete</a>
+        <div class="card mt-4 border-0">
+            <div class="d-sm-flex flex-md-column g-0 h-100">
+                <div class="col">
+                    <img src="{{ post.image.url }}" class="card-img-top" alt="Restaurant">
+                </div>
+                <div class="col d-flex flex-column justify-content-between h-100">
+                    <div class="card-body text-center d-flex flex-column justify-content-between align-items-center">
+                        <h5 class="card-title"><a href="{% url 'posts:post_detail' post.id %}">{{post.title}}</a></h5>
+                        <p class="card-text">{{ post.body | truncatechars:100 }}</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-end gap-3">
+                        <a href="{% url 'posts:post_edit' post.id %}" class="w-full btn-primary btn-sm">Edit</a>
+                        <!-- Delete Button -->
+                        <a href="{% url 'posts:post_delete' post.id %}" type="button" class="w-full btn-primary btn-sm"
+                           style="background-color:brown;"
+                           data-bs-toggle="modal"
+                           data-bs-target="#confirmDeleteModal">Delete</a>
+                    </div>
+                    <div class="card-footer">
+                        By {{post.author}} - {{post.created_on | date:"M d, Y"}} - Likes {{post.like.count}} - Comments
+                        {{post.post_comments.count}}
+                    </div>
                 </div>
             </div>
-            <div class="card-footer d-flex justify-content-between align-items-center">
-                {{post.created_on | date:"M d, Y"}} - Likes {{post.like.count}} - Comments
-                {{post.post_comments.count}}
-            </div>
         </div>
-
     </div>
 
+    <!-- Modal Start -->
     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog"
          aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -40,14 +49,14 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
+                </div>
 
 
                 <div class="modal-body">
                     <form method="POST" style="margin-top: 1.3em;" action="{% url 'posts:post_delete' post.id %}">
                         {{ form }}
                         {% csrf_token %}
-                        <strong>Are you sure about deleting the post:<br>"{{ post.title }"
+                        <strong>Are you sure about deleting the post:<br>"{{ post.title | truncatechars:100 }}"
                             <br>This action cannot be undone!</strong>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
@@ -59,46 +68,9 @@
             </div>
         </div>
     </div>
+    <!-- Modal End-->
     {% endfor %}
-    <div class="d-flex justify-content-center align-items-center mt-2 mb-2">
-        <a href="{% url 'posts:post_create' %}" class="btn btn-primary" style="width: 200px;">
-            More publish post
-        </a>
-    </div>
-    {% else %}
-    <div class="row justify-content-center">
-        <div class="col-12 text-center">
-            <a href="" class="d-flex align-items-center justify-content-center m-3 mb-lg-0 text-dark text-decoration-none">
-                <span class="fs-4">My Published Posts</span>
-            </a>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-    <div class="col-md-4">
-        <p>You haven't published any posts yet.<a href="{% url 'posts:post_create' %}"> Click</a> to publish one
-            immediately
-        </p>
-    </div>
-    </div>
-    {% endif %}
-    {% endblock %}
-
-    <div class="container">
-        <div class="row">
-            <div class="card-text col-md-8 mt-3 offset-md-2">
-                <h3>Delete Post</h3>
-                <form method="POST" style="margin-top: 1.3em;">
-                    {{ form }}
-                    {% csrf_token %}
-                    <strong>Are you sure about deleting the post:<br>
-                        "{{ post.body | truncatechars:150 }}"
-                        <br>This action cannot be undone!</strong>
-                    <br>
-                    <a href="{% url 'posts:manage_posts' request.user.id %}" class="btn btn-outline-secondary btn-sm">Cancel</a>
-                    <button type="submit" class="btn btn-danger btn-sm mt-3 mb-3">Delete Post</button>
-                </form>
-
-            </div>
-        </div>
-    </div>
 </div>
+
+
+{% endblock content %}

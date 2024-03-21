@@ -12,9 +12,9 @@
             <div class="post-view-card">
                 <div class="card-body">
                     <h5 class="card-title">{{object.title}}</h5>
-                    <div class="overflow-auto" style="max-height:250px;">
+                    <p class="card-text">
                         {{object.body}}
-                    </div>
+                    </p>
                     <div class="d-flex justify-content-start align-items-center">
                         {% if request.user.is_authenticated %}
                         <form action="{% url 'posts:like_post' object.id %}" method="POST">
@@ -35,7 +35,7 @@
                                 <div class="d-flex justify-content-start align-items-center">
                                 <button type="submit" name="post_id" value="{{ object.id }}"
                                         class="btn d-flex align-items-center">
-                                        <i class="fas fa-sharp fa-solid fa-heart"></i>
+                                    <i class="fas fa-sharp fa-solid fa-heart"></i>
                                     <span>{{object.like.count}}</span>
                                 </button>
                                 <button type="button" class="btn d-flex align-items-center">
@@ -47,9 +47,9 @@
                             {% endif %}
                         </form>
                         {% else %}
-                        <i class="fas fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
                         <span>{{object.like.count}}</span>
-                        <i class="fas fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-comment"></i>
                         <span>{{object.post_comments.count}}</span>
                         {% endif %}
                     </div>
@@ -78,9 +78,7 @@
                                             <p class="mb-0">
                                                 {{comment.created_on | date:"M d, Y"}}
                                             </p>
-                                            {% if request.user.is_authenticated and request.user == comment.author %}
                                             <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                            {% endif %}
                                         </div>
                                         <p class="mb-0">
                                             {{comment.body}}

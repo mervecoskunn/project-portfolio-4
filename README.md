@@ -463,6 +463,7 @@ I have used django TestCase for automated testing views, forms and models files.
   ![chrome-screenshot](ekran_goruntusu_dosya_adi.png)
 
   - Mobile - Small Screen Sizes:
+  
   ![chrome-screenshot](documentation/smallscreen.png)
 
 ## Deployment
