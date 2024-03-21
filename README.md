@@ -457,13 +457,13 @@ I have used django TestCase for automated testing views, forms and models files.
 
   - Desktop-Large Screen sizes:
   
-  ![chrome-screenshot](ekran_goruntusu_dosya_adi.png)
+  ![chrome-screenshot](documentation/largescreen.png)
 
   - Ipad - Medium Screen sizes:
   ![chrome-screenshot](ekran_goruntusu_dosya_adi.png)
 
   - Mobile - Small Screen Sizes:
-  ![chrome-screenshot](ekran_goruntusu_dosya_adi.png)
+  ![chrome-screenshot](documentation/smallscreen.png)
 
 ## Deployment
 
