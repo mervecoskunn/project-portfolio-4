@@ -66,6 +66,9 @@ I designed this platform with desgin thinking approach. With only the necessary 
   * As a Site Admin I can approve or disapprove posts so that I can filter out objectionable posts.
   * As a Site Admin I can create, read, update and delete posts so that I can manage my blog content.
   * As a Site Admin I can approve posts before it is published so that the site content will be consistent.
+  * As the site admin, I can create or delete categories.
+  * As the site admin, I can define users as super users.
+  ![admin page](documentation/admin-page-screenshot.png)
 
 ## Member User
   
