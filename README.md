@@ -13,6 +13,8 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
   - [Admin](#admin)
   - [Member User](#member-user)
   - [General User](#general-user)
+    - [Design Choices](#design-choices)
+    - [Typography](#typography)
   - [Features](#features)
     - [Existing Features](#existing-features)
   - [Future Features](#future-features)
@@ -80,6 +82,22 @@ I designed this platform with desgin thinking approach. With only the necessary 
   * As a Site User / Admin user I can view comments on an individual post so that I can read the conversation.
   * As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral.
 
+### Design Choices
+
+ -  Color Schema
+   The following colors were used for the color scheme. In general, simple and eye-friendly colors were preferred, so that the user could focus more on the content and posts.
+
+   [Coolors](https://coolors.co/)color palette.
+
+   ![Coolors](documentation/colors.png)
+
+### Typography
+ [Google Fonts](https://fonts.google.com/) 
+ These three fonts, Bitter, Lato and Roboto, were used on the site. Since the site is generally aimed to be simple, legible and simple font families were chosen.
+
+ ![bitter](documentation/bitter.png)
+ ![lato](documentation/lato.png)
+ ![roboto](documentation/roboto.png)
 
 ## Features
 
