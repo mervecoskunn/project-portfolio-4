@@ -259,7 +259,7 @@ Throughout the project development, GitHub projects is used. Click[here](https:/
 
 [pgadmin4](https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html)- I created database schema with pgadmin4.
 
-![Database Diagram](documentation/database_schema.png)
+![Database Diagram](documentation/database-schema.png)
 
 ### Post Model
 
