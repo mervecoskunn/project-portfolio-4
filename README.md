@@ -177,7 +177,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - If you visit the post detail page without logging in, there is a button that directs you to the login page to log in or register to comment.
    ![join to discussion](documentation/join-discussion.png)
-   
+
 - Login Page
   
   - Visitor can login from the Login tab in the menu and comment, like or post can be shared.
@@ -659,11 +659,22 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
 - [Django project documentation](https://www.djangoproject.com/)
 - [Code Institute](https://codeinstitute.net/se/)
 - [Bootstrap](https://getbootstrap.com/)
-- [Django Allauth](https://docs.allauth.org/en/latest/)
 - [Coolors](https://coolors.co/) color palette.
-  ![colors](documentation/colors.png)
+     ![colors](documentation/colors.png)
 - [Am I Responsive](https://ui.dev/amiresponsive) 
-- [AWS](https://aws.amazon.com/console/) I used AWS, another option used like Claudinary. Because I already use it. 
+- [Amazon web service](https://aws.amazon.com/console/) I used AWS, another option used like Claudinary. Because I already use it.
+ 
+- The links I added below belong to their own websites related to the posts shared on the blog page. The content and free photographs from these pages were used.
+
+- [Espresso House](https://espressohouse.com/)
+- [Waynes Cafe](https://www.waynescoffee.se/)
+- [Broder Jacobs](https://www.broderjakobs.se/)
+- [Stortorget Bar](https://stortorget.bar/)
+- [Ericssons Bar](https://ericssons.bar/)
+- [Jhon Scott Lund](https://johnscotts.se/lund/)
+- [la cucina](https://lacucina-lund.se/)
+- [aiko sushi](https://www.aikosushi.se/)
+- [rosegarden lund](https://rosegarden.se/locations/lundgrand)
 
 ## Acknowledgements
 
