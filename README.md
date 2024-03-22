@@ -239,6 +239,8 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - All the site visiters can view the comments and the number of likes.
 
   - The unregistered site visiters cannot view the comment box to write a comment. Once they register, then it is visible for them and they can post a comment on any post they want.
+  - Users can comment to all posts.
+  
   ![comment button](documentation/comment-section.png)
 
   - User can edit or delete own comments and then user can see a message is done.
@@ -253,6 +255,9 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - The logout modal asks the user if they confirm to logout. 
   ![logout section](documentation/logout-screenshot.png)
+  
+  - When users loggout they will see a message logout is successful like other message login create post, create comment, edit post, edit comment, delete post, delete comment and register. 
+
 
 ## Future Features
 
