@@ -175,6 +175,9 @@ I designed this platform with desgin thinking approach. With only the necessary 
    
    ![post detail page ](documentation/post-detail-page-screenshot.png)
 
+  - If you visit the post detail page without logging in, there is a button that directs you to the login page to log in or register to comment.
+   ![join to discussion](documentation/join-discussion.png)
+   
 - Login Page
   
   - Visitor can login from the Login tab in the menu and comment, like or post can be shared.
@@ -258,6 +261,10 @@ I designed this platform with desgin thinking approach. With only the necessary 
   
   - When users loggout they will see a message logout is successful like other message login create post, create comment, edit post, edit comment, delete post, delete comment and register. 
 
+- Footer
+  
+  Footer section was designed very simply and understandably. He was directed with icons to follow blog-related pages on social media.
+  ![footer](documentation/footer.png)
 
 ## Future Features
 
