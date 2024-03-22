@@ -59,7 +59,7 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
 
 ## User Experience 
 
-I designed this platform with desgin thinking approach. With only the necessary content/information. User can surf the site easily and get the information they are looking for. Please find all my defined user stories [here](https://github.com/mervecoskunn/project-portfolio-4/issues)
+I designed this platform with desgin thinking approach. With only the necessary content/information. User can surf the site easily and get the information they are looking for. Please find all my defined user stories [here](https://github.com/users/mervecoskunn/projects/7)
 
 ## Admin
 
@@ -68,6 +68,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
   * As a Site Admin I can approve posts before it is published so that the site content will be consistent.
   * As the site admin, I can create or delete categories.
   * As the site admin, I can define users as super users.
+  
   ![admin page](documentation/admin-page-screenshot.png)
 
 ## Member User
@@ -76,14 +77,16 @@ I designed this platform with desgin thinking approach. With only the necessary 
   * As a Member User I can post/add/edit/delete posts so that I can share and manage my posts.
   * As a Member User I can like or unlike a post so that I can interact with the content.
   * As a Member User I can leave comments on a post so that I can be involved in the conversation.
+  * As a Member User I can edit or delete my comment. 
   * As a Member User I can view my posts status of approval so that I can manage my posts.
 
 ## General User 
   
   * As a Site User I can view a list of posts so that I can select one to read.
   * As a Site User I can click on a post so that I can read the full text.
-  * As a Site User / Admin user I can view comments on an individual post so that I can read the conversation.
-  * As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral.
+  * As a Site User I can view comments on an individual post so that I can read the conversation.
+  * As a Site User  I can view the number of likes on each post so that I can see which is the most popular or viral.
+  * As a Site User I can register an account and login web site.
 
 ### Design Choices
 
@@ -251,9 +254,11 @@ I designed this platform with desgin thinking approach. With only the necessary 
 ## Structure
  
 The idea behind the structure of Best Places Of Lund was to simply guide users visiting the site in a clear and understandable way.
-Color confusion and unnecessary information were avoided
+Color confusion and unnecessary information were avoided.
 
-Throughout the project development, GitHub projects is used. Click[here](https://github.com/users/mervecoskunn/projects/7) to view the process.
+The Best Places of Lund site is divided into two parts: When the user is logged in and When the user is logged in. Depending on the login status, the user is presented with different pages. When the user logs out, user can access the home page, all posts, categories, the detail page where user can read the post details, and the login/register pages. When the user logs in, the home page, all posts, categories, my page, and logout options can be accessed.
+
+Read more about the different choices in the [Features](#features) section.
 
 ## Databases
 
