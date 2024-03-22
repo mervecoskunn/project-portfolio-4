@@ -113,19 +113,24 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
  The navigation bar is very clean and clear. Different menus appear for the site user depending on whether you are logged in or not.
 
-  - Logout Menu Big Size:
+  - Logout Menu Big Size
+  
     ![logout menu big size](documentation/logout-menu.png)
 
-  - Logout Menu Small Size: 
+  - Logout Menu Small Size 
+  
      ![logout menu small size](documentation/logout-menu-small-size.png)
 
-  - Login Menu Small Size:
+  - Login Menu Small Size
+  
      ![login menu small size](documentation/login-small-size-menu.png)
 
-  - Login Menu Big Size:
+  - Login Menu Big Size
+  
      ![logoin menu big size](documentation/login-big-size-menu.png)      
 
 - Home Page
+
   - Three posts representing categories were shared on the home page, so that users could access short and clear information about the site, and were supported with visuals. If the user wishes, they can easily list the posts belonging to the relevant category by clicking the button below. A short and clear guidance has been added on the screen so that they can Login/Register and like comments.
   
   ![Home Page](documentation/homepage-features.png)
@@ -140,6 +145,12 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   ![login-register-section](documentation/menu-login-register.png)
 
+  - After logging in, the user is notified with a message.
+   ![login-alert-message](documentation/login-alert-message.png)
+  
+  - After logging out, you will be greeted with the same message for logout.
+   ![logout-alert-message](documentation/logout-alert.png)
+   
 - Categories
   
   - When visitors click on the categories option in the menu, we encounter a dropdown menu and from there the visitors can select the option visitor wants and list the relevant posts.
