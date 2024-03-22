@@ -146,11 +146,13 @@ I designed this platform with desgin thinking approach. With only the necessary 
   ![login-register-section](documentation/menu-login-register.png)
 
   - After logging in, the user is notified with a message.
+  
    ![login-alert-message](documentation/login-alert-message.png)
   
   - After logging out, you will be greeted with the same message for logout.
+  
    ![logout-alert-message](documentation/logout-alert.png)
-   
+
 - Categories
   
   - When visitors click on the categories option in the menu, we encounter a dropdown menu and from there the visitors can select the option visitor wants and list the relevant posts.
@@ -204,6 +206,8 @@ I designed this platform with desgin thinking approach. With only the necessary 
   ![Publish post page](documentation/publish-post-screenshot.png)
 
   - Once the post is published, the post is submitted for approval to the admin. The submitted post can be viewed/edited/deleted by the owner from 'Manage my posts Page'.
+  
+  
 
 - Manage My Posts Page
   
@@ -212,6 +216,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - Post title, quote, and submission date/time are available separately for each submission.
   - Finally, buttons for editing and deleting options are provided for user management.
   - After the post is published, it is submitted to the administrator for approval. The submitted post can be viewed/edited/deleted by its owner from the 'Manage My Post'.
+  - The user will be informed by message after the edit and delete operations.
    
    ![Manage my posts](documentation/manage-my-post.png)
 
@@ -313,23 +318,24 @@ Comment model handles the content of the comment, the username of the person com
   * Python
 
 ### Frameworks, Libraries & Tools Used
-
-  * Bootstrap 5 - grid, layout, columns, cards and forms structure.
-  * Django - django frameworks to manage apps.
-  * GitHub - to store the overall project repository.
-  * Visual Studio Code - used as workspace to do the coding.
-  * Balsamiq Wireframes - To design the wireframe of the complete project.
-  * Google Fonts - Used for logo and all the written content.
-  * Fontawesome - fontawesome icons for social media links and as additional design.
-  * Heroku - for the deployement of the project.
-  * Coolors - to choose the color palette and color shades.
-  * PostgreSQL - database storage of the models.
-  * Amazon Web Service - image and static files storage.
-  * AmIResponsinve - responsiveness of the site.
+  * [asgiref](https://pypi.org/project/asgiref/)- ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+  * [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - grid, layout, columns, cards and forms structure.
+  * [Django](https://pypi.org/project/Django/) - django frameworks to manage apps.
+  * [gunicorn](https://pypi.org/project/gunicorn/) -- Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.
+  * [GitHub](https://github.com/) - to store the overall project repository.
+  * [Visual Studio Code](https://code.visualstudio.com/) - used as workspace to do the coding.
+  * [Balsamiq Wireframes](https://balsamiq.com/) - To design the wireframe of the complete project.
+  * [Google Fonts](https://fonts.google.com/) - Used for logo and all the written content.
+  * [Fontawesome](https://fontawesome.com/) - fontawesome icons for social media links and as additional design.
+  * [Heroku](https://www.heroku.com/github-students) - for the deployement of the project.
+  * [Coolors](https://coolors.co/) - to choose the color palette and color shades.
+  * [ElephantSQL](https://www.elephantsql.com/)PostgreSQL - database storage of the models.
+  * [Amazon Web Service](https://aws.amazon.com/) - image and static files storage.
+  * [AmIResponsinve](https://ui.dev/amiresponsive) - responsiveness of the site.
   * Lighthouse - used for testing site functionality.
-  * W3C Markup Validation Service - used for HTML testing.
-  * W3C CSS Validation Service - used for CSS testing
-  * PEP8 - used for Python files testing.
+  * [W3C Markup Validation Service](https://validator.w3.org/) - used for HTML testing.
+  * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used for CSS testing
+  * [PEP8](https://pep8ci.herokuapp.com/) - used for Python files testing.
 
 ## Testing
 
