@@ -402,6 +402,39 @@ Comment model handles the content of the comment, the username of the person com
 
 
 
+| Status | Main Website - Admin Logged In                                |
+| ------ | --------------------------------------------------------------| 
+|   ✓    | Clicking the login section on navbar and login as admin       |
+|   ✓    | Clicking the nav logo loads the home page                     |
+|   ✓    | Click the Home button and all categories are listed home page |
+|   ✓    | Click on the category you want to see and list the posts      |
+|   ✓    | Click one post and read more detail about this post           |
+|   ✓    | See likes and comments on the post detail page                |
+|   ✓    | Clicking the like icon and like post                          |
+|   ✓    | Write one comment on comment section and save your own comment|
+|   ✓    | Clicking comment edit icon and edit or delete your comment    |
+|   ✓    | Clicking the other categories and list their posts            |
+|   ✓    | Clicking the nav bar all posts and lists all posts            |
+|   ✓    | Clicking the my page on navbar and go your page see two option|
+|   ✓    | Click the publish post button and see create post page        |
+|   ✓    | Click the manage my post button and list your posts           |
+|   ✓    | Click the edit button on post edit your own post              |
+|   ✓    | Click the delete button and delete your own post              |
+|   ✓    | Click the publish post button and see create post page        |
+|   ✓    | Clicking the youtube icon on footer and visit youtube         |
+|   ✓    | Clicking the facebook icon on footer and visit facebook       |
+|   ✓    | Clicking the instagram icon on footer and visit instagram     |
+|   ✓    | Click the logout on navbar and see logout confirmation message|
+|   ✓    | Click the logout button and see logout successful message     |
+|   ✓    | Add the end of the url "/admin" and see django admin panel    |
+|   ✓    | Clicking the categories and delete one category /add category |
+|   ✓    | Clicking the comments and delete or add comments              |
+|   ✓    | Click the posts on admin panel and create new posts or delete |
+|   ✓    | Click the posts on admin panel and approve posts, delete, edit|
+|   ✓    | Click the users on admin panel and create new users           |
+|   ✓    | Click the users on admin panel and change their features      |
+|   ✓    | Clicking the categories and delete one category /add category |
+
 
 
 # Unit Testing
