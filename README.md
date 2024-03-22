@@ -436,6 +436,32 @@ Comment model handles the content of the comment, the username of the person com
 |   ✓    | Clicking the categories and delete one category /add category |
 
 
+| Status | Create a Post - User Logged In                                |
+| ------ | --------------------------------------------------------------| 
+|   ✓    | Title field is required                                       |
+|   ✓    | Title field does not accept empty field                       |
+|   ✓    | Title field does not accept just spaces                       |
+|   ✓    | Content field is required                                     |
+|   ✓    | Content field does not accept empty field                     |
+|   ✓    | Content field does not accept just spaces                     |
+|   ✓    | Category field is required                                    |
+|   ✓    | Category field does not accept empty field                    |
+|   ✓    | Images field is required                                      |
+|   ✓    | Clicking the create post button                               |
+|   ✓    | Sending  to admin appove                                      |
+|   ✓    | Clicking the my manage post on my page checking approval posts|
+
+
+
+| Status | Create a New User - User Logged Out                           |
+| ------ | --------------------------------------------------------------|
+|   ✓    | Username field is required                                    |
+|   ✓    | Username field does not accept empty field                    |
+|   ✓    | Email field does not accept just spaces                       |
+|   ✓    | Email field is request                                        |
+|   ✓    | Password field does not accept empty field                    |
+|   ✓    | Success flash message is displayed when the user submits the create a new user form|
+
 
 # Unit Testing
 
