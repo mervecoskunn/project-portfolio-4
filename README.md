@@ -369,7 +369,7 @@ I have used django TestCase for automated testing views, forms and models files.
 
 - Lighthouse
   - Testing results:
-    ![lighthouse-screenshot](documentation/lighthouse.png)
+    ![lighthouse-screenshot](documentation/lighthouse-last.png)
 
 ## W3C Markup Validation Service
 - Home Page:
@@ -500,10 +500,10 @@ I have used django TestCase for automated testing views, forms and models files.
 
   - Desktop-Large Screen sizes:
   
-  ![chrome-screenshot](documentation/largescreen.png)
+  ![large screen check](documentation/largescreen.png)
 
   - Ipad - Medium Screen sizes:
-  ![chrome-screenshot](ekran_goruntusu_dosya_adi.png)
+  ![ipad mini screen check](documentation/ipad-mini-screen-size-test.png)
 
   - Mobile - Small Screen Sizes:
   
