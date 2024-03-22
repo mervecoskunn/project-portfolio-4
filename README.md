@@ -356,6 +356,23 @@ Comment model handles the content of the comment, the username of the person com
 |   ✓    | Typing in a incorrect URL on the page loads the 404 error page|
 |   ✓    | Pasting page that needs authentication loads a forbidden page |
 |   ✓    | Clicking the nav logo loads the home page                     |
+|   ✓    | Click the Home button and all categories are listed home page |
+|   ✓    | Click on the category you want to see and list the posts      |
+|   ✓    | Click one post and read more detail about this post           |
+|   ✓    | See likes and comments on the post detail page                |
+|   ✓    | If you want to comment, click the join discussion button.     |
+|   ✓    | Clicking the other categories and list their posts            |
+|   ✓    | Clicking the nav bar all posts and lists all posts            |
+|   ✓    | Clicking the login section on nav bar and login page          |
+|   ✓    | Clicking the register section on nav bar create an account    |
+|   ✓    | Clicking the youtube icon on footer and visit youtube         |
+|   ✓    | Clicking the facebook icon on footer and visit facebook       |
+|   ✓    | Clicking the instagram icon on footer and visit instagram     |
+
+
+
+
+
 
 
 # Unit Testing
