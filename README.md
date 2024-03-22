@@ -109,6 +109,22 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
 ### Existing Features 
 
+- Navigation
+
+ The navigation bar is very clean and clear. Different menus appear for the site user depending on whether you are logged in or not.
+
+  - Logout Menu Big Size:
+    ![logout menu big size](documentation/logout-menu.png)
+
+  - Logout Menu Small Size: 
+     ![logout menu small size](documentation/logout-menu-small-size.png)
+
+  - Login Menu Small Size:
+     ![login menu small size](documentation/login-small-size-menu.png)
+
+  - Login Menu Big Size:
+     ![logoin menu big size](documentation/login-big-size-menu.png)      
+
 - Home Page
   - Three posts representing categories were shared on the home page, so that users could access short and clear information about the site, and were supported with visuals. If the user wishes, they can easily list the posts belonging to the relevant category by clicking the button below. A short and clear guidance has been added on the screen so that they can Login/Register and like comments.
   
@@ -117,6 +133,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - When the visitor clicks on any category selected, it goes to the relevant category. 
 
   - Anyone who visits the page, whether they are a user or not, can go directly to the category if they click on the "Read More" button on the category posts on the main page.
+  
     ![read more button](documentation/read-more-screenshots.png)
 
   - Visitor can create an account by clicking on login/register from the menu or from the button below.
@@ -163,7 +180,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
   - User can share new posts, view own posts, and edit or delete them if user wishes when user click the manage my posts button. If user clicks on the title of own post, user can view own post in detail.
   - User can log out using the logout button.
   
-  ![My page](documentation/my-page-screenshot.png)
+  ![My page](documentation/my-page-last.png)
 
 - Publish a Post 
 
@@ -207,6 +224,10 @@ I designed this platform with desgin thinking approach. With only the necessary 
 
   - The unregistered site visiters cannot view the comment box to write a comment. Once they register, then it is visible for them and they can post a comment on any post they want.
   ![comment button](documentation/comment-section.png)
+
+  - User can edit or delete own comments and then user can see a message is done.
+   
+   ![alert-message-comment](documentation/comment-alert-message.png)
 
 - Logout
  
