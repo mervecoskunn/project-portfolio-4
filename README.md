@@ -26,6 +26,7 @@ The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuap
   - [Technologies Used](#technologies-used)
     - [Frameworks, Libraries \& Tools Used](#frameworks-libraries--tools-used)
   - [Testing](#testing)
+    - [Manuel Testing](#manuel-testing)
 - [Unit Testing](#unit-testing)
   - [Testing :](#testing-)
   - [Validator Testing:](#validator-testing)
@@ -351,6 +352,8 @@ Comment model handles the content of the comment, the username of the person com
 
 ## Testing
 
+### Manuel Testing
+
 | Status | Main Website - User Logged Out                                |
 | ------ | --------------------------------------------------------------| 
 |   ✓    | Typing in a incorrect URL on the page loads the 404 error page|
@@ -370,6 +373,32 @@ Comment model handles the content of the comment, the username of the person com
 |   ✓    | Clicking the instagram icon on footer and visit instagram     |
 
 
+
+| Status | Main Website - User Logged In                                |
+| ------ | --------------------------------------------------------------| 
+|   ✓    | Typing in a incorrect URL on the page loads the 404 error page|
+|   ✓    | Pasting page that needs authentication loads a forbidden page |
+|   ✓    | Clicking the nav logo loads the home page                     |
+|   ✓    | Click the Home button and all categories are listed home page |
+|   ✓    | Click on the category you want to see and list the posts      |
+|   ✓    | Click one post and read more detail about this post           |
+|   ✓    | See likes and comments on the post detail page                |
+|   ✓    | Clicking the like icon and like post                          |
+|   ✓    | Write one comment on comment section and save your own comment|
+|   ✓    | Clicking comment edit icon and edit or delete your comment    |
+|   ✓    | Clicking the other categories and list their posts            |
+|   ✓    | Clicking the nav bar all posts and lists all posts            |
+|   ✓    | Clicking the my page on navbar and go your page see two option|
+|   ✓    | Click the publish post button and see create post page        |
+|   ✓    | Click the manage my post button and list your posts           |
+|   ✓    | Click the edit button on post edit your own post              |
+|   ✓    | Click the delete button and delete your own post              |
+|   ✓    | Click the publish post button and see create post page        |
+|   ✓    | Clicking the youtube icon on footer and visit youtube         |
+|   ✓    | Clicking the facebook icon on footer and visit facebook       |
+|   ✓    | Clicking the instagram icon on footer and visit instagram     |
+|   ✓    | Click the logout on navbar and see logout confirmation message|
+|   ✓    | Click the logout button and see logout successful message     |
 
 
 
