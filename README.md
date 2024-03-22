@@ -351,6 +351,13 @@ Comment model handles the content of the comment, the username of the person com
 
 ## Testing
 
+| Status | Main Website - User Logged Out                                |
+| ------ | --------------------------------------------------------------| 
+|   ✓    | Typing in a incorrect URL on the page loads the 404 error page|
+|   ✓    | Pasting page that needs authentication loads a forbidden page |
+|   ✓    | Clicking the nav logo loads the home page                     |
+
+
 # Unit Testing
 
 I have used django TestCase for automated testing views, forms and models files.
@@ -660,7 +667,9 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
 - [Code Institute](https://codeinstitute.net/se/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Coolors](https://coolors.co/) color palette.
+
      ![colors](documentation/colors.png)
+
 - [Am I Responsive](https://ui.dev/amiresponsive) 
 - [Amazon web service](https://aws.amazon.com/console/) I used AWS, another option used like Claudinary. Because I already use it.
  
