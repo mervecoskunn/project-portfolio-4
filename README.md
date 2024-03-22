@@ -768,7 +768,7 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
 
 This project was created for Portfolio Project #4 (Full-Stack Tolkit) - Diploma in Full Stack Software Development Diploma at the Code Institute. I would like to thank my mentor Precious Ijege for relevant feedback during the project.
 
-Merve COSKUN, 2024
+[Merve COSKUN](https://www.linkedin.com/in/merve-coskun-fullstack/), 2024
 
 
 
