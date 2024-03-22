@@ -5,52 +5,52 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <img src="{{ object.image.url }}"
-            class="img-fluid" alt="Restaurant Image">
+            <img src="{{ object.post.image.url }}"
+                 class="img-fluid" alt="Restaurant Image">
         </div>
         <div class="col-lg-6">
             <div class="post-view-card">
                 <div class="card-body">
-                    <h5 class="card-title">{{object.title}}</h5>
-                    <p class="card-text">
-                        {{object.body}}
-                    </p>
+                    <h5 class="card-title">{{object.post.title}}</h5>
+                    <div class="overflow-auto" style="max-height:250px;">
+                        {{object.post.body}}
+                    </div>
                     <div class="d-flex justify-content-start align-items-center">
                         {% if request.user.is_authenticated %}
-                        <form action="{% url 'posts:like_post' object.id %}" method="POST">
+                        <form action="{% url 'posts:like_post' object.post.id %}" method="POST">
                             {% csrf_token %}
 
                             {% if liked %}
                             <div class="d-flex justify-content-start align-items-center">
-                                <button type="submit" name="post_id" value="{{ object.id }}"
+                                <button disabled type="submit" name="post_id" value="{{ object.post.id }}"
                                         class="btn d-flex align-items-center">
-                                        <i class="fas fa-sharp fa-solid fa-heart"></i>
-                                    <span>{{object.like.count}}</span>
+                                    <i class="fas fa-sharp fa-solid fa-heart"></i>
+                                    <span>{{object.post.like.count}}</span>
                                 </button>
-                                <button type="button" class="btn d-flex align-items-center">
+                                <button disabled type="button" class="btn d-flex align-items-center">
                                     <i class="fas fa-solid fa-comment"></i>
-                                    <span>{{object.post_comments.count}}</span>
+                                    <span>{{object.post.post_comments.count}}</span>
                                 </button>
                                 {% else %}
                                 <div class="d-flex justify-content-start align-items-center">
-                                <button type="submit" name="post_id" value="{{ object.id }}"
-                                        class="btn d-flex align-items-center">
-                                    <i class="fas fa-sharp fa-solid fa-heart"></i>
-                                    <span>{{object.like.count}}</span>
-                                </button>
-                                <button type="button" class="btn d-flex align-items-center">
-                                    <i class="fas fa-solid fa-comment"></i>
-                                    <span>{{object.post_comments.count}}</span>
-                                </button>
+                                    <button type="submit" name="post_id" value="{{ object.post.id }}"
+                                            class="btn d-flex align-items-center">
+                                        <i class="fas fa-sharp fa-solid fa-heart"></i>
+                                        <span>{{object.post.like.count}}</span>
+                                    </button>
+                                    <button type="button" class="btn d-flex align-items-center">
+                                        <i class="fas fa-solid fa-comment"></i>
+                                        <span>{{object.post.post_comments.count}}</span>
+                                    </button>
                                 </div>
                             </div>
                             {% endif %}
                         </form>
                         {% else %}
-                        <i class="fa-sharp fa-solid fa-heart"></i>
-                        <span>{{object.like.count}}</span>
-                        <i class="fa-solid fa-comment"></i>
-                        <span>{{object.post_comments.count}}</span>
+                        <i class="fas fa-sharp fa-solid fa-heart"></i>
+                        <span>{{object.post.like.count}}</span>
+                        <i class="fas fa-solid fa-comment"></i>
+                        <span>{{object.post.post_comments.count}}</span>
                         {% endif %}
                     </div>
                 </div>
@@ -69,42 +69,24 @@
 
                                 <p class="fw-light mb-4 pb-2">Latest Comments section by users</p>
 
-                                <div class="d-flex flex-column ">
 
-                                    {% for comment in object.post_comments.all %}
-                                    <div class="mt-4">
-                                        <h6 class="fw-bold mb-1"> By {{comment.author}}</h6>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="mb-0">
-                                                {{comment.created_on | date:"M d, Y"}}
-                                            </p>
-                                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                        </div>
-                                        <p class="mb-0">
-                                            {{comment.body}}
-                                        </p>
-                                    </div>
-
-                                    <hr class="my-0 mt-4">
-                                    {% endfor %}
-
-                                </div>
                                 <div class="mt-4">
                                     {% if request.user.is_authenticated %}
 
-                                    <form method="POST" action="{% url 'posts:comment_create' object.id %}">
+                                    <form method="POST"
+                                          action="{% url 'posts:comment_update' object.post.id object.id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <label>Your Comment:</label>
                                             <hr>
-                                            {{comment_form.body}}
+                                            {{form.body}}
                                         </div>
                                         <hr>
                                         <div class="flex d-flex justify-content-center">
                                             <button class="btn btn-primary btn-block btn-sm" type="submit">Send</button>
                                         </div>
                                     </form>
-                
+
                                     {% else %}
                                     <div class="d-flex align-items-center justify-content-center">
                                         <a href="{% url 'accounts:login' %}" class="btn btn-primary m-3 btn-sm">
@@ -112,7 +94,9 @@
                                         </a>
                                     </div>
                                     {% endif %}
-                                
+
+                                </div>
+                                <div class="d-flex flex-column ">
                                 </div>
                             </div>
                         </div>

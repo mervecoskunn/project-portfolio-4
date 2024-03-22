@@ -8,6 +8,16 @@
         <a href="" class="d-flex align-items-center justify-content-center m-3 mb-lg-0 text-dark text-decoration-none">
             <span class="fs-4">Manage My Posts</span>
         </a>
+        <!--  Messages Start -->
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %} {% endif %}
+        <!--  Messages End -->
     </div>
 </div>
 

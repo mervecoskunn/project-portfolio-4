@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.views import generic
@@ -11,6 +12,7 @@ class PostCreateView(generic.CreateView):
     template_name = 'posts/post_create.html'
 
     def get_success_url(self):
+        messages.success(self.request, 'Post creation successful')
         return reverse('posts:user_page', args=[self.request.user.id])
 
     def form_valid(self, form):
@@ -39,7 +41,6 @@ class PostListView(generic.ListView):
     model = models.Post
     queryset = models.Post.objects.filter(is_approved=True)
     template_name = 'posts/post_list.html'
-    paginate_by = 6
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
@@ -51,6 +52,7 @@ class PostEditView(generic.UpdateView):
     template_name = 'posts/post_edit.html'
 
     def get_success_url(self):
+        messages.success(self.request, 'Post update successful')
         return reverse('posts:manage_posts', args=[self.request.user.id])
 
     def get(self, request, *args, **kwargs):
@@ -65,6 +67,7 @@ class PostDeleteView(generic.DeleteView):
     template_name = 'posts/post_delete.html'
 
     def get_success_url(self):
+        messages.success(self.request, 'Post delete successful')
         return reverse('posts:manage_posts', args=[self.request.user.id])
 
     def get(self, request, *args, **kwargs):
@@ -80,6 +83,7 @@ class CommentCreateView(generic.CreateView):
     template_name = 'posts/post_detail.html'
 
     def get_success_url(self):
+        messages.success(self.request, 'Comment creation successful')
         return reverse('posts:post_detail', args=[self.kwargs.get('post_id')])
 
     def form_valid(self, form):
@@ -91,11 +95,48 @@ class CommentCreateView(generic.CreateView):
         return super().post(request, *args, **kwargs)
 
 
+class CommentEditView(generic.UpdateView):
+    model = models.Comment
+    form_class = forms.CommentEditForm
+    template_name = 'posts/comment_edit.html'
+    pk_url_kwarg = 'comment_id'
+
+    def get_success_url(self):
+        messages.success(self.request, 'Comment update successful')
+        return reverse('posts:post_detail', args=[self.kwargs.get('post_id')])
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.post_id = self.kwargs.get('post_id')
+        return super().form_valid(form)
+
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
+
+class CommentDeleteView(generic.DeleteView):
+    model = models.Comment
+    template_name = 'posts/post_detail.html'
+    pk_url_kwarg = 'comment_id'
+
+    def get_success_url(self):
+        messages.success(self.request, 'Comment delete successful')
+        return reverse('posts:post_detail', args=[self.kwargs.get('post_id')])
+
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
+
 class CategoryListView(generic.ListView):
     model = models.Category
     queryset = models.Category.objects.all()
     template_name = 'categories/category_list.html'
-    paginate_by = 6
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
@@ -144,9 +185,7 @@ class PostLike(generic.DetailView):
             post.like.remove(request.user)
         else:
             post.like.add(request.user)
-        return HttpResponseRedirect(
-            reverse('posts:post_detail', 
-                args=[kwargs.get('post_id')]))
+        return HttpResponseRedirect(reverse('posts:post_detail', args=[kwargs.get('post_id')]))
 
 
 def category_on_all_pages(request):

@@ -1,6 +1,7 @@
 from django import views
+from django.contrib import messages
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 
 from accounts import forms
@@ -9,6 +10,18 @@ from accounts import forms
 class CustomLoginView(LoginView):
     form_class = forms.LoginForm
     template_name = "accounts/login.html"
+
+    def get_default_redirect_url(self):
+        messages.success(self.request, 'You have successfully logged in')
+        return super().get_default_redirect_url()
+
+
+class CustomLogoutView(LogoutView):
+    template_name = "accounts/logout.html"
+
+    def get_default_redirect_url(self):
+        messages.success(self.request, 'You have successfully logout')
+        return super().get_default_redirect_url()
 
 
 class RegisterView(views.View):

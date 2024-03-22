@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-6">
             <img src="{{ object.image.url }}"
-            class="img-fluid" alt="Restaurant Image">
+                 class="img-fluid" alt="Restaurant Image">
         </div>
         <div class="col-lg-6">
             <div class="post-view-card">
@@ -24,7 +24,7 @@
                             <div class="d-flex justify-content-start align-items-center">
                                 <button type="submit" name="post_id" value="{{ object.id }}"
                                         class="btn d-flex align-items-center">
-                                        <i class="fas fa-sharp fa-solid fa-heart"></i>
+                                    <i class="fas fa-sharp fa-solid fa-heart"></i>
                                     <span>{{object.like.count}}</span>
                                 </button>
                                 <button type="button" class="btn d-flex align-items-center">
@@ -33,15 +33,15 @@
                                 </button>
                                 {% else %}
                                 <div class="d-flex justify-content-start align-items-center">
-                                <button type="submit" name="post_id" value="{{ object.id }}"
-                                        class="btn d-flex align-items-center">
+                                    <button type="submit" name="post_id" value="{{ object.id }}"
+                                            class="btn d-flex align-items-center">
                                         <i class="fas fa-sharp fa-solid fa-heart"></i>
-                                    <span>{{object.like.count}}</span>
-                                </button>
-                                <button type="button" class="btn d-flex align-items-center">
-                                    <i class="fas fa-solid fa-comment"></i>
-                                    <span>{{object.post_comments.count}}</span>
-                                </button>
+                                        <span>{{object.like.count}}</span>
+                                    </button>
+                                    <button type="button" class="btn d-flex align-items-center">
+                                        <i class="fas fa-solid fa-comment"></i>
+                                        <span>{{object.post_comments.count}}</span>
+                                    </button>
                                 </div>
                             </div>
                             {% endif %}
@@ -68,29 +68,17 @@
                                 <h3>Comments</h3>
 
                                 <p class="fw-light mb-4 pb-2">Latest Comments section by users</p>
-
-                                <div class="d-flex flex-column ">
-
-                                    {% for comment in object.post_comments.all %}
-                                    <div class="mt-4">
-                                        <h6 class="fw-bold mb-1"> By {{comment.author}}</h6>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="mb-0">
-                                                {{comment.created_on | date:"M d, Y"}}
-                                            </p>
-                                            {% if request.user.is_authenticated and request.user == comment.author %}
-                                            <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                            {% endif %}
-                                        </div>
-                                        <p class="mb-0">
-                                            {{comment.body}}
-                                        </p>
-                                    </div>
-
-                                    <hr class="my-0 mt-4">
-                                    {% endfor %}
-
+                                <!--  Messages Start -->
+                                {% if messages %} {% for message in messages %}
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {{message}}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
+                                {% endfor %} {% endif %}
+                                <!--  Messages End -->
+
                                 <div class="mt-4">
                                     {% if request.user.is_authenticated %}
 
@@ -106,7 +94,7 @@
                                             <button class="btn btn-primary btn-block btn-sm" type="submit">Send</button>
                                         </div>
                                     </form>
-                
+
                                     {% else %}
                                     <div class="d-flex align-items-center justify-content-center">
                                         <a href="{% url 'accounts:login' %}" class="btn btn-primary m-3 btn-sm">
@@ -114,7 +102,73 @@
                                         </a>
                                     </div>
                                     {% endif %}
-                                
+
+                                </div>
+                                <div class="d-flex flex-column ">
+
+                                    {% for comment in object.post_comments.all %}
+                                    <div class="mt-4">
+                                        <h6 class="fw-bold mb-1"> By {{comment.author}}</h6>
+                                        <div class="d-flex align-items-center mb-3">
+                                            <p class="mb-0">
+                                                {{comment.created_on | date:"M d, Y"}}
+                                            </p>
+                                            {% if request.user.is_authenticated and request.user == comment.author %}
+                                            <a href="{% url 'posts:comment_update' object.id comment.id %}"
+                                               class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
+                                            <a href="{% url 'posts:comment_delete' object.id comment.id %}"
+                                               type="button" class="link-muted" data-bs-toggle="modal"
+                                               data-bs-target="#confirmDeleteModal"><i
+                                                    class="fas fa-trash ms-2"></i></a>
+                                            {% endif %}
+                                        </div>
+                                        <p class="mb-0">
+                                            {{comment.body}}
+                                        </p>
+                                    </div>
+
+                                    <hr class="my-0 mt-4">
+
+                                    <!-- Modal Start -->
+                                    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm
+                                                        Delete</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <form method="POST" style="margin-top: 1.3em;"
+                                                          action="{% url 'posts:comment_delete' object.id comment.id %}">
+                                                        {{ form }}
+                                                        {% csrf_token %}
+                                                        <strong>
+                                                            Are you sure about deleting the comment:<br>"{{ comment.body | truncatechars:100 }}"
+                                                            <br>This action cannot be undone!
+                                                        </strong>
+                                                        <br>
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                                data-bs-dismiss="modal">Cancel
+                                                        </button>
+                                                        <button type="submit" class="btn btn-danger btn-sm mt-3 mb-3">
+                                                            Delete Post
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal End-->
+
+                                    {% endfor %}
+
                                 </div>
                             </div>
                         </div>

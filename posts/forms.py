@@ -52,3 +52,13 @@ class CommentCreateForm(forms.ModelForm):
     class Meta:
         model = models.Comment
         fields = ('body',)
+
+
+class CommentEditForm(forms.ModelForm):
+    body = forms.CharField(widget=forms.Textarea(
+        attrs={"class": "form-control"}
+    ))
+
+    class Meta:
+        model = models.Comment
+        fields = ('body',)

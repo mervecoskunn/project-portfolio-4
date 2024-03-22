@@ -16,6 +16,8 @@ urlpatterns = [
     path('categories/<uuid:pk>', views.CategoryDetailView.as_view(), name='category_detail'),
 
     path('<uuid:post_id>/comment', views.CommentCreateView.as_view(), name='comment_create'),
+    path('<uuid:post_id>/comment/<uuid:comment_id>', views.CommentEditView.as_view(), name='comment_update'),
+    path('<uuid:post_id>/comment/<uuid:comment_id>/delete', views.CommentDeleteView.as_view(), name='comment_delete'),
     path('<uuid:post_id>/like', views.PostLike.as_view(), name='like_post'),
 
     path('manage/<uuid:pk>', views.ManagePostView.as_view(), name='manage_posts'),
