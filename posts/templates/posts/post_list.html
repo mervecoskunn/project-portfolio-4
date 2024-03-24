@@ -11,12 +11,12 @@
     </div>
 </div>
 
-<div class="row justify-content-center align-items-center">
+<div class="row justify-content-start align-items-start">
     {% for post in object_list %}
-    <div class="col-md-4">
+    <div class="col-xl-4">
         <div class="card mt-4 border-0">
-            <div class="d-sm-flex flex-md-column g-0 h-100">
-                <div class="col">
+            <div class="d-sm-flex flex-xl-column g-0 h-100">
+                <div class="col d-flex justify-content-center align-items-center">
                     <img src="{{ post.image.url }}" class="card-img-top" alt="Restaurant">
                 </div>
                 <div class="col d-flex flex-column justify-content-between h-100">
