@@ -12,7 +12,7 @@ class PostCreateView(generic.CreateView):
     template_name = 'posts/post_create.html'
 
     def get_success_url(self):
-        messages.success(self.request, 'Post creation successful')
+        messages.success(self.request, 'The post has been sent successfully for admin approval.')
         return reverse('posts:user_page', args=[self.request.user.id])
 
     def form_valid(self, form):
@@ -167,7 +167,6 @@ class UserPageView(generic.TemplateView):
 class ManagePostView(generic.ListView):
     model = models.Post
     template_name = 'posts/manage_posts.html'
-    paginate_by = 6
 
     def get_queryset(self):
         user = self.request.user

@@ -38,5 +38,6 @@ class RegisterView(views.View):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
+            messages.success(self.request, 'User registration successful')
             return redirect('posts:home')
         return render(request, 'accounts/register.html', {'form': form})
