@@ -624,8 +624,7 @@ I have used django TestCase for automated testing views, forms and models files.
     
 
   - General User
-    - As a Site User I can register an account and login if I want to share post or comment.
-    ![register page](documentation/register-screnshot.png)
+    
     - As a Site User I can view a list of posts so that I can select one to read.
       
     ![home-page-screenshot](documentation/restaurant-screenshot.png)    
@@ -637,16 +636,18 @@ I have used django TestCase for automated testing views, forms and models files.
     - As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral. 
     ![one-post-commentscreenshot](documentation/comment-section.png)
 
-  - General User
-   -  As a General User
-   -  
+    - As a Site User I can register an account and login if I want to share post or comment.
+    ![register page](documentation/register-screnshot.png)
+
   - Browser Compatability
     - Checked and verified that the site works on different browsers.
+  
     - Safari:
-    ![safari-screenshot](ekran_goruntusu_dosya_adi.png) 
+    ![safari-screenshot](documentation/safari-browser-capability.png) 
 
   - Chrome:
-    ![chrome-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![chrome-screenshot](documentation/chrome-browser-capability.png)
+  
 
 - Responsiveness Testing
 
