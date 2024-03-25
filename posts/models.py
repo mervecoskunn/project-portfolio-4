@@ -69,7 +69,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         get_user_model(), verbose_name=_('Author'),
         help_text=_('Post creator'),
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         related_name='user_posts',
         blank=True
     )
@@ -111,7 +111,7 @@ class Comment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     author = models.ForeignKey(
         get_user_model(),
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         related_name='user_comments',
         verbose_name=_('Comment Creator'),
         help_text=_('Comment creator')
