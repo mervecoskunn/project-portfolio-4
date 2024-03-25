@@ -848,8 +848,8 @@ To clone and set up this project you need to follow the steps below.
 
      ![colors](documentation/colors.png)
 
-- [Amazon web service](https://aws.amazon.com/console/) I used AWS, another option used like Claudinary. Because I already use it.
- 
+- [Amazon web service](https://aws.amazon.com/console/) I used AWS and I followed this page to implement it. [How to implementAWS to project](https://simpleisbetterthancomplex.com/tutorial/2017/08/01/how-to-setup-amazon-s3-in-a-django-project.html)
+
 - The links I added below belong to their own websites related to the posts shared on the blog page. The content and free photographs from these pages were used.
 
 - [Espresso House](https://espressohouse.com/)
