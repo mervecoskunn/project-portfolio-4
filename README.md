@@ -656,7 +656,7 @@ I have used django TestCase for automated testing views, forms and models files.
   ![large screen check](documentation/largescreen.png)
 
   - Ipad - Medium Screen sizes:
-  ![ipad mini screen check](documentation/ipad-mini-screen-size-test.png)
+  ![ipad mini screen check](documentation/ipad-mini.png)
 
   - Mobile - Small Screen Sizes:
   
