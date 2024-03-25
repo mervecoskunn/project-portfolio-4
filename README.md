@@ -154,6 +154,29 @@ I designed this platform with desgin thinking approach. With only the necessary 
   
    ![logout-alert-message](documentation/logout-alert.png)
 
+  - Edit comment alert 
+  
+   ![edit comment alert](documentation/comment-alert-message.png)
+
+  - Delete comment alert
+    
+    ![edit comment delete alert](documentation/delete-%20comment-success-alert.png)
+
+ - Delete comment confirm message
+
+  ![delete comment confirm message](documentation/delete-%20comment-confirm-message.png)
+
+ - Comment create alert message
+
+  ![comment create alert message](documentation/comment-create-success.png)
+
+ - Register Success 
+ - Post create success
+ - Post delete success
+ - Post edit success 
+  
+  In such cases, the user is also informed with alert messages.The user sees these warning messages for 5 seconds and then the messages disappear or the user can close them earlier by pressing the x sign.
+  
 - Categories
   
   - When visitors click on the categories option in the menu, we encounter a dropdown menu and from there the visitors can select the option visitor wants and list the relevant posts.
