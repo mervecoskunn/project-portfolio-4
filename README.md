@@ -69,6 +69,8 @@ I designed this platform with desgin thinking approach. With only the necessary 
   * As a Site Admin I can approve posts before it is published so that the site content will be consistent.
   * As the site admin, I can create or delete categories.
   * As the site admin, I can define users as super users.
+  * As the site admin I can see the users and can delete or add new users if desired.
+  * As the site admin I can see the all comments from all users and if it is need I can delete it.
   
   ![admin page](documentation/admin-page-screenshot.png)
 
