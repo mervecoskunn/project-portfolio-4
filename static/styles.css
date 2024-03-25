@@ -5,11 +5,11 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #2F4858;
-    background-color: #f2f1e2; /* Arka plan rengi */
+    background-color: #f2f1e2;
     margin: 0;
     padding: 0;
 }
-
+/* Nav Bar start*/
 .navbar-brand {
     font-family: 'Bitter', serif;
     font-size: 24px;
@@ -39,12 +39,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/* Navbar End */
+/* Footer start*/
 .footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #F5F5F5; /* Altbilgi arka plan rengi */
+    background-color: #F5F5F5; 
     text-align: center;
     padding: 20px 0;
     margin-top: 3rem;
@@ -61,12 +62,14 @@ body {
     font-size: 24px;
     margin: 0 10px;
 }
-
+/* Footer End */
+/* Image Start  */
 img {
     width: 100%;
     height: auto;
 }
-
+/* Image End  */
+/*  Card start */
 .card {
     margin-bottom: 20px;
     border: none;
@@ -113,7 +116,8 @@ img {
     justify-content: space-between;
     height: 100%;
 }
-
+/*  Card End */
+/*  Media queries start */
 @media (min-width: 570px) and (max-width: 990px) {
     .card {    
         height: 350px;
@@ -136,6 +140,7 @@ img {
     }
   
 }
+/*  Media queries end */
 
 .card-body {
   height: 100%;
@@ -232,15 +237,15 @@ h5.card-title a {
 }
 
 .btn-primary {
-    background-color: #97ACA2; /* Birincil düğme arka plan rengi */
+    background-color: #97ACA2; 
     color: #F2F1E2;
-    border: 1px solid #C4CEBF; /* Birincil düğme kenarlık rengi */
+    border: 1px solid #C4CEBF; 
     padding: 10px 20px;
     border-radius: 0;
     width: 200px;
     margin: 0;
 }
-
+/* Media queries for btn-primary start */
 @media (min-width: 0) and (max-width:  570px) {
     .btn-primary {    
         font-size: 16px;
@@ -258,39 +263,41 @@ h5.card-title a {
         font-size: 12px;
     }
 }
+/* Media queries for btn-primary end */
 
 .btn-primary:hover {
     background-color: #6D8B89;
     color: #F5F5F5;
-    border: 1px solid #C4CEBF; /* Birincil düğme üzerine gelindiğinde kenarlık rengi */
+    border: 1px solid #C4CEBF;
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 0;
 }
 
-/* Font Awesome Kalp İkonu */
+/* Font Awesome Like icon */
 .fa-sharp.fa-solid.fa-heart,
 .fa-sharp.fa-solid.fa-heart:hover,
 .fa-sharp.fa-solid.fa-heart:hover::before {
     position: relative;
-    color: #D16BA5; /* Kalp simgesi rengi ve hover rengi */
+    color: #D16BA5; 
     font-size: 24px;
 }
 
-/* Font Awesome Yorum İkonu */
+/* Font Awesome Comment Icon */
 .fa-solid.fa-comment,
 .fa-solid.fa-comment:hover,
 .fa-solid.fa-comment:hover::before {
     position: relative;
-    color: #D16BA5; /* Yorum simgesi rengi ve hover rengi */
+    color: #D16BA5;
     font-size: 24px;
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu Start */
 .dropdown-menu {
-    background-color: #F2F1E2; /* Açılır menü arka plan rengi */
+    background-color: #F2F1E2;
 }
 
 .dropdown-menu a:hover {
-    background-color: #C4CEBF; /* Açılır menü üzerindeki bağlantıların hover rengi */
+    background-color: #C4CEBF;
 }
+/* Dropdown Menu End */

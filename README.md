@@ -2,7 +2,7 @@
 
 This is a platform where everyone can share, post, comment and like restaurants, cafes and bars in Lund/Sweden. Its purpose is to help users share their experiences, discuss their ideas, and choose a venue if they wish based on the comments they see.
 
-    ADD AM I RESPONSIVE SCREENSHOT !!!!
+    
     
 The Live Site can be found [here.](https://merve-project-4-dfec2093a369.herokuapp.com/)  
 
