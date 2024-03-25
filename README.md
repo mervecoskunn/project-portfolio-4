@@ -176,7 +176,7 @@ I designed this platform with desgin thinking approach. With only the necessary 
  - Post edit success 
   
   In such cases, the user is also informed with alert messages.The user sees these warning messages for 5 seconds and then the messages disappear or the user can close them earlier by pressing the x sign.
-  
+
 - Categories
   
   - When visitors click on the categories option in the menu, we encounter a dropdown menu and from there the visitors can select the option visitor wants and list the relevant posts.
@@ -367,7 +367,6 @@ Comment model handles the content of the comment, the username of the person com
   * [Coolors](https://coolors.co/) - to choose the color palette and color shades.
   * [ElephantSQL](https://www.elephantsql.com/)PostgreSQL - database storage of the models.
   * [Amazon Web Service](https://aws.amazon.com/) - image and static files storage.
-  * [AmIResponsinve](https://ui.dev/amiresponsive) - responsiveness of the site.
   * Lighthouse - used for testing site functionality.
   * [W3C Markup Validation Service](https://validator.w3.org/) - used for HTML testing.
   * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used for CSS testing
@@ -510,7 +509,7 @@ I have used django TestCase for automated testing views, forms and models files.
     ![User page view test](documentation/user-page-test.png)  
 
   - Result:
-    ![result-terminal-screenshot](ekran_goruntusu_dosya_adi.png)
+    ![test cases result screenshot](documentation/test-result.jpeg)
 
 ## Validator Testing:
 
