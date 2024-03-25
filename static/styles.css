@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2F4858;
+    background-color: #f2f1e2; /* Arka plan rengi */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-family: 'Bitter', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2F4858;
+}
+
+.navbar-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #2F4858;
+}
+
+.navbar-item:hover {
+    color: red;
+    background-color: #2F4858;
+}
+
+.nav-item.active a {
+    color: #2F4858;
+    font-weight: 600;
+}
+
+.login-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #F5F5F5; /* Altbilgi arka plan rengi */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 3rem;
+}
+
+.footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #2F4858;
+}
+
+.footer a {
+    color: #2F4858;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 15px #C4CEBF;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.my-page-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 15px #C4CEBF;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.login-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 15px #C4CEBF;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+}
+
+.post-view-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 15px #C4CEBF;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.comments-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 15px #C4CEBF;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    justify-content: space-between;
+    height: 100%;
+}
+
+@media (min-width: 570px) and (max-width: 990px) {
+    .card {    
+        height: 350px;
+    }
+    .post-view-card {
+        max-height: 350px;
+    }
+    .d-sm-flex {
+        display: flex !important;
+    }
+    
+}
+
+@media (min-width: 990px) and (max-width: 3160px) {
+    .card {    
+        height: 650px;
+    }
+    .post-view-card {
+        max-height: 580px;
+    }
+  
+}
+
+.card-body {
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 570px) {
+    .card-body  {    
+        height: auto;
+    }
+}
+
+.card-img-top {
+    width: 100%;
+    height: 350px;
+}
+
+a {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    color: #2F4858;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    color: #2F4858;
+}
+
+h5.card-title a {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    color: #2F4858;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.card-title a {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    color: #2F4858;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.card-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #2F4858;
+    margin: 0;
+}
+
+@media (min-width: 0) and (max-width:  570px) {
+    .card-title  {    
+        font-size: 15px;
+    }
+    .card-text  {    
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 570px) and (max-width:  990px) {
+    .card-title  {    
+        font-size: 24px;
+    }
+    .card-text  {    
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 2160px) {
+    .card-title  {    
+        font-size: 24px;
+    }
+}
+
+.card-footer {
+    background-color: #C4CEBF;
+    color: #2F4858;
+    border-top: none;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background-color: #97ACA2; /* Birincil düğme arka plan rengi */
+    color: #F2F1E2;
+    border: 1px solid #C4CEBF; /* Birincil düğme kenarlık rengi */
+    padding: 10px 20px;
+    border-radius: 0;
+    width: 200px;
+    margin: 0;
+}
+
+@media (min-width: 0) and (max-width:  570px) {
+    .btn-primary {    
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 570px) and (max-width:  990px) {
+    .btn-primary {    
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 2160px) {
+    .btn-primary {    
+        font-size: 12px;
+    }
+}
+
+.btn-primary:hover {
+    background-color: #6D8B89;
+    color: #F5F5F5;
+    border: 1px solid #C4CEBF; /* Birincil düğme üzerine gelindiğinde kenarlık rengi */
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+/* Font Awesome Kalp İkonu */
+.fa-sharp.fa-solid.fa-heart,
+.fa-sharp.fa-solid.fa-heart:hover,
+.fa-sharp.fa-solid.fa-heart:hover::before {
+    position: relative;
+    color: #D16BA5; /* Kalp simgesi rengi ve hover rengi */
+    font-size: 24px;
+}
+
+/* Font Awesome Yorum İkonu */
+.fa-solid.fa-comment,
+.fa-solid.fa-comment:hover,
+.fa-solid.fa-comment:hover::before {
+    position: relative;
+    color: #D16BA5; /* Yorum simgesi rengi ve hover rengi */
+    font-size: 24px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #F2F1E2; /* Açılır menü arka plan rengi */
+}
+
+.dropdown-menu a:hover {
+    background-color: #C4CEBF; /* Açılır menü üzerindeki bağlantıların hover rengi */
+}

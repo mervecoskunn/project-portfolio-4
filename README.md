@@ -655,7 +655,8 @@ I have used django TestCase for automated testing views, forms and models files.
   
   ![large screen check](documentation/largescreen.png)
 
-  - Ipad - Medium Screen sizes:
+  - Ipad - Medium Screen sizes
+  
   ![ipad mini screen check](documentation/ipad-mini.png)
 
   - Mobile - Small Screen Sizes:
@@ -683,7 +684,6 @@ I have followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute
      
   * Install Django and gunicorn: pip3 install django gunicorn
   * Install supporting libraries:	pip3 install dj_database_url psycopg2
-  * Install Cloudinary Libraries	pip3 install dj3-cloudinary-storage
   * Create requirements file	pip3 freeze --local > requirements.txt
   * Create Project	django-admin startproject PROJ_NAME . (Don’t forget the . )
   * Create App	python3 manage.py startapp APP_NAME
