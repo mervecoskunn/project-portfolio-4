@@ -597,6 +597,7 @@ I have used django TestCase for automated testing views, forms and models files.
 ## User Story Testing
 
 - Admin
+  - As the site admin, I can access the Django-admin panel and log in as admin by adding "/admin" to the end of the url link and pressing the enter button again.
   - As a Site Admin I can approve or disapprove posts so that I can filter out objectionable posts.
 
   - As a Site Admin I can create, read, update and delete posts so that I can manage my blog content.
@@ -606,16 +607,16 @@ I have used django TestCase for automated testing views, forms and models files.
     ![admin-page-django-screenshot](documentation/admin-page-screenshot.png)
 
   - Member User
-    - As a Member User I can register an account so that I can manage my posts, comment and like.  
+    - As a Member User I can login my account so that I can manage my posts, comment and like.  
     ![sign-up-screenshot](documentation/login-screenshot.png)
-
+    
     - As a Member User I can post/add/edit/delete posts so that I can share and manage my posts.
-    ![my-account-page-screenshot](documentation/my-page-screenshot.png)  
+    ![my page](documentation/my-page-last.png) 
   
     - As a Member User I can like or unlike a post so that I can interact with the content.
-
     - As a Member User I can leave comments on a post so that I can be involved in the conversation.
-  
+    - As a Member User I can edit my comment or delete.
+    
    ![comment-section-screenshot](documentation/comment-section.png)
 
     - As a Member User I can view my posts status of approval so that I can manage my posts.
@@ -623,6 +624,8 @@ I have used django TestCase for automated testing views, forms and models files.
     
 
   - General User
+    - As a Site User I can register an account and login if I want to share post or comment.
+    ![register page](documentation/register-screnshot.png)
     - As a Site User I can view a list of posts so that I can select one to read.
       
     ![home-page-screenshot](documentation/restaurant-screenshot.png)    
@@ -634,6 +637,9 @@ I have used django TestCase for automated testing views, forms and models files.
     - As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral. 
     ![one-post-commentscreenshot](documentation/comment-section.png)
 
+  - General User
+   -  As a General User
+   -  
   - Browser Compatability
     - Checked and verified that the site works on different browsers.
     - Safari:
